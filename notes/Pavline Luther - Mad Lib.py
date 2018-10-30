@@ -3,21 +3,22 @@
 #("Sports keep kids physically fit, engaged at school,")
 # ("and teach kids skills that will help them be successful in life.")
 
-recipient = "Obama"
-people = "turtles"
+recipient = input("Type in an person : ")
+people = input("Type in an a noun : ")
 # verb1 has to end in "ing" and the first letter has to be capitalized
 # verb2 is the same as verb 1 just not capitalized
-verb1 = "Eating mangos"
-verb2 = "eating mangos"
-place = "Aunt Bertha's house"
-noun = "chunky monkey"
-issue = "living for a long of time"
-adjective1 = "obese"
-adjective2 = "dead"
-skill1 = "cosmology "
-skill2 = "freestyle dancing"
-skill3 = "martial arts"
-adjective_or_plural_noun = "astronauts"
+verb1 = input("Type in an a verb that is  : ")
+verb2 = input("Type in an : ")
+place = input("Type in an : ")
+noun = input("Type in an : ")
+issue = input("Type in an : ")
+adjective1 = input("Type in an : ")
+adjective2 = input("Type in an : ")
+skill1 = input("Type in an : ")
+skill2 = input("Type in an : ")
+skill3 = input("Type in an : ")
+# feeling or a group
+adjective_or_plural_noun = input("Type in an : ")
 
 # Story
 print("Dear %s, most %s would agree that %s from %s is beneficial for %s." % (recipient, people, verb2, place, people))
