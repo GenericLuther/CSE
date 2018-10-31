@@ -10,25 +10,26 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/notes$Pavline_Luther___Mad_Lib.coverage" NAME="Pavline Luther - Mad Lib Coverage Results" MODIFIED="1540915924716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/notes$Hello_World.coverage" NAME="Hello World Coverage Results" MODIFIED="1540917837613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/notes$Hello_World.coverage" NAME="Hello World Coverage Results" MODIFIED="1541004120214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="915340300">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.33" value="1" />
           <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.42" value="1" />
+          <entry key="project.open.time.44" value="1" />
           <entry key="project.open.time.56" value="1" />
           <entry key="project.open.time.65" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="3063" />
+          <entry key="py" value="3661" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -43,7 +44,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="3063" />
+          <entry key="Python" value="3661" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -54,12 +55,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Hello World.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="96" column="20" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="20" />
+            <state relative-caret-position="325">
+              <caret line="138" column="27" selection-start-line="138" selection-start-column="27" selection-end-line="138" selection-end-column="27" />
               <folding>
-                <marker date="1540917837535" expanded="true" signature="1264:1269" ph="..." />
-                <marker date="1540917837535" expanded="true" signature="1344:1349" ph="..." />
-                <marker date="1540917837535" expanded="true" signature="1446:1491" ph="..." />
+                <marker date="1541004120136" expanded="true" signature="1264:1269" ph="..." />
+                <marker date="1541004120136" expanded="true" signature="1347:1352" ph="..." />
+                <marker date="1541004120136" expanded="true" signature="1449:1494" ph="..." />
+                <marker date="1541004120136" expanded="true" signature="1968:1973" ph="..." />
               </folding>
             </state>
           </provider>
@@ -68,7 +70,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pavline Luther - Mad Lib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
+            <state relative-caret-position="340">
               <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
             </state>
           </provider>
@@ -231,22 +233,23 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Pavline Luther - Mad Lib.py">
+    <entry file="file://$PROJECT_DIR$/Hello World.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+        <state relative-caret-position="325">
+          <caret line="138" column="27" selection-start-line="138" selection-start-column="27" selection-end-line="138" selection-end-column="27" />
+          <folding>
+            <marker date="1541004120136" expanded="true" signature="1264:1269" ph="..." />
+            <marker date="1541004120136" expanded="true" signature="1347:1352" ph="..." />
+            <marker date="1541004120136" expanded="true" signature="1449:1494" ph="..." />
+            <marker date="1541004120136" expanded="true" signature="1968:1973" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Hello World.py">
+    <entry file="file://$PROJECT_DIR$/Pavline Luther - Mad Lib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="96" column="20" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="20" />
-          <folding>
-            <marker date="1540917837535" expanded="true" signature="1264:1269" ph="..." />
-            <marker date="1540917837535" expanded="true" signature="1344:1349" ph="..." />
-            <marker date="1540917837535" expanded="true" signature="1446:1491" ph="..." />
-          </folding>
+        <state relative-caret-position="340">
+          <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
         </state>
       </provider>
     </entry>
