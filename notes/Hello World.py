@@ -80,7 +80,7 @@ def f(x):
     f(1)
     f(5)
     f(5000)
-
+"""
 # Distance Formula
 
 
@@ -92,7 +92,7 @@ def distance(x1, y1, x2, y2):
 distance(0, 0, 3, 4)
 distance(0, 0, 5, 12)
 
-
+"""
 # Loops
 for i in range(5000):
     #sayIt()
@@ -102,7 +102,6 @@ for i in range(5000):
 
 
 for i in range (5):
-    f(i)
 """
 # While loops
 a = 0
@@ -144,8 +143,8 @@ print(5 > 3)
 print(5 >= 3)
 
 print(3 == 3)
-print (3 != 4)
-"""
-a = 3 # A is set to 3
-a == 3 # Is equal to 3?
-"""
+print(3 != 4)
+
+a = 3  # A is set to 3
+a == 3  # Is equal to 3?
+
