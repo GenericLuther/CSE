@@ -115,6 +115,7 @@ For loops - Use when you know EXACTLY how many iterations
 While loops - Use when you DON'T know how many iterations
 """
 
+xd = input("Put in  a number :")
 
 def grade_calc(percentage):
     if percentage >= 90:
@@ -129,7 +130,7 @@ def grade_calc(percentage):
         return "F"
 
 
-your_grade = grade_calc(82)
+your_grade = grade_calc(87)
 print(your_grade)
 
 # "Random" Notes
