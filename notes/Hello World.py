@@ -115,7 +115,6 @@ For loops - Use when you know EXACTLY how many iterations
 While loops - Use when you DON'T know how many iterations
 """
 
-xd = input("Put in  a number :")
 
 def grade_calc(percentage):
     if percentage >= 90:

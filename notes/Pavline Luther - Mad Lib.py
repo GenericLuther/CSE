@@ -4,7 +4,7 @@
 # ("and teach kids skills that will help them be successful in life.")
 
 recipient = input("Type in an person : ")
-people = input("Type in an a noun : ")
+people = input("Type in an a plural noun : ")
 # verb1 has to end in "ing" and the first letter has to be capitalized
 # verb2 is the same as verb 1 just not capitalized
 verb1 = input("Type in an a verb that is capitalized  : ")

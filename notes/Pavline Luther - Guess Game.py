@@ -1,16 +1,20 @@
 import random
 a = random.randint(1, 10)
-guess = 5
+number = (int(input("Guess the number: ")))
 
-
-
-def grade_calc(answer):
- if number == answer:
-  return "Winner Winner Chinken dinner"
- elif number > answer:
-  return "You aiming to high"
- elif number < answer:
-  return "Not tall enough for this ride"
-
- your_grade = grade_calc(number)
- print(your_grade)
+playing = True
+guesses = 5
+while guesses > 0 and playing:
+    if number > a:
+        print("You over shot")
+        guesses -= 1
+        number = (int(input("Guess another number: ")))
+        print()
+    if number < a:
+        print("Not tall enough for this ride")
+        guesses -= 1
+        number = (int(input("Guess another number: ")))
+        print()
+    else:
+        print("Winner Winner Chicken Dinner")
+        playing = False
