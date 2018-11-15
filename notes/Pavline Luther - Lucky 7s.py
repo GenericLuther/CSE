@@ -1,12 +1,9 @@
 import random
 money = int(15)
-rolls = int(0)
-maxroll = int(0)
+rolls = 0
+maxroll = 0
 maxmoney = int(15)
 playing = True
-d1 = random.randint(1, 6)
-d2 = random.randint(1, 6)
-roll = d1+d2
 while money > 0:
     d1 = random.randint(1, 6)
     d2 = random.randint(1, 6)
