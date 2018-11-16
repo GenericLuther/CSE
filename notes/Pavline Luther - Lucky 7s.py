@@ -32,6 +32,12 @@ while money > 0:
 
 if maxmoney == 15:
     maxmoney = "15.... You Should Have Stayed Home"
-print("You Rolled %s Times" % rolls)
-print("Your Highest Total Was %s" % maxmoney)
-print("You Should Have Stopped On Roll %s" % maxroll)
+    maxroll = "You Should Have Never Rolled The Dice,"
+    print("You Rolled %s Times" % rolls)
+    print("Your Highest Total Was %s" % maxmoney)
+    print("%s You Never Made Profit" % maxroll)
+
+else:
+    print("You Rolled %s Times" % rolls)
+    print("Your Highest Total Was %s" % maxmoney)
+    print("You Should Have Stopped On Roll %s" % maxroll)
