@@ -103,17 +103,18 @@ for i in range(5000):
 
 for i in range (5):
 """
+"""
 # While loops
 a = 0
 while a < 10:
     print(a)
     a += 2   # This is the same as saying a = a + 1
 
-"""
+
 At the moment you START the loop:
 For loops - Use when you know EXACTLY how many iterations 
 While loops - Use when you DON'T know how many iterations
-"""
+
 
 
 def grade_calc(percentage):
@@ -148,3 +149,29 @@ print(3 != 4)
 a = 3  # A is set to 3
 a == 3  # Is equal to 3?
 
+# Creating a list
+color = ["blue", "turquoise", "pink", "orange","black", "red", "yellow", "purple", "green"] # USE SQUARE BRACKETS!!!!!
+print(color)
+print(color[1])
+print(color[0])
+
+# Length of the list
+print("There are %d things in the list." % len(color))
+
+# Changing Elements in a list
+color[1] = "cyan"
+print(color)
+
+# Looping through lists
+for item1 in color:
+    print(item1)
+"""
+shoppinglist = ["TV", "Nintendo", "Phone", "Dinner", "Couch", "DVD Player", "The Second Season Of Spongbob On DVD"]
+shoppinglist[2] = "Bed"
+for item2 in shoppinglist:
+    print(item2)
+print(shoppinglist)
+print("The last thing in the list is %s" % shoppinglist[len(shoppinglist) - 1])
+
+# Slicing a list
+print(shoppinglist[1:3])
