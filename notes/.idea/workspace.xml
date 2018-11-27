@@ -10,9 +10,9 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/notes$Pavline_Luther___Guess_Game.coverage" NAME="Pavline Luther - Guess Game Coverage Results" MODIFIED="1541698336906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/notes$Lucky_7s.coverage" NAME="Lucky 7s Coverage Results" MODIFIED="1542389636209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/notes$Hello_World.coverage" NAME="Hello World Coverage Results" MODIFIED="1541439629859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/notes$Lucky_7s.coverage" NAME="Lucky 7s Coverage Results" MODIFIED="1543252673960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/notes$Pavline_Luther___Mad_Lib.coverage" NAME="Pavline Luther - Mad Lib Coverage Results" MODIFIED="1541525323598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/notes$Hello_World.coverage" NAME="Hello World Coverage Results" MODIFIED="1543340694249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="915340300">
@@ -23,23 +23,23 @@
           <entry key="project.open.time.33" value="1" />
           <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.39" value="1" />
-          <entry key="project.open.time.41" value="1" />
+          <entry key="project.open.time.41" value="2" />
           <entry key="project.open.time.42" value="2" />
           <entry key="project.open.time.44" value="4" />
           <entry key="project.open.time.46" value="1" />
           <entry key="project.open.time.49" value="2" />
           <entry key="project.open.time.56" value="1" />
           <entry key="project.open.time.58" value="1" />
-          <entry key="project.open.time.65" value="1" />
+          <entry key="project.open.time.65" value="2" />
           <entry key="project.open.time.68" value="1" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.opened" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="17" />
-          <entry key="py" value="6438" />
+          <entry key="dummy" value="18" />
+          <entry key="py" value="8041" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -54,8 +54,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="17" />
-          <entry key="Python" value="6438" />
+          <entry key="PLAIN_TEXT" value="18" />
+          <entry key="Python" value="8041" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -72,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pavline Luther - Lucky 7s.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="34" column="54" lean-forward="true" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
+            <state relative-caret-position="578">
+              <caret line="34" column="54" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -99,16 +99,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Hello World.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1989">
-              <caret line="117" selection-start-line="117" selection-end-line="117" />
+            <state relative-caret-position="276">
+              <caret line="208" column="26" selection-start-line="208" selection-start-column="26" selection-end-line="208" selection-end-column="26" />
               <folding>
-                <marker date="1541610916564" expanded="true" signature="1264:1269" ph="..." />
-                <marker date="1541610916564" expanded="true" signature="1347:1352" ph="..." />
-                <marker date="1541610916564" expanded="true" signature="1452:1497" ph="..." />
-                <marker date="1541610916564" expanded="true" signature="1965:1970" ph="..." />
+                <marker date="1543340888049" expanded="true" signature="1264:1269" ph="..." />
+                <marker date="1543340888049" expanded="true" signature="1347:1352" ph="..." />
+                <marker date="1543340888049" expanded="true" signature="1452:1497" ph="..." />
+                <marker date="1543340888049" expanded="true" signature="1963:1968" ph="..." />
               </folding>
             </state>
           </provider>
@@ -135,11 +135,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Pavline Luther - Mad Lib.py" />
-        <option value="$PROJECT_DIR$/Hello World.py" />
         <option value="$PROJECT_DIR$/Pavline Luther - Guess Game.py" />
         <option value="$PROJECT_DIR$/Lucky 7s.py" />
         <option value="$PROJECT_DIR$/Pavline Luther - HangMan.py" />
         <option value="$PROJECT_DIR$/Pavline Luther - Lucky 7s.py" />
+        <option value="$PROJECT_DIR$/Hello World.py" />
       </list>
     </option>
   </component>
@@ -176,7 +176,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Lucky 7s">
+  <component name="RunManager" selected="Python.Hello World">
     <configuration name="Hello World" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="notes" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -273,10 +273,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Hello World" />
         <item itemvalue="Python.Lucky 7s" />
         <item itemvalue="Python.Pavline Luther - Guess Game" />
         <item itemvalue="Python.Pavline Luther - Mad Lib" />
-        <item itemvalue="Python.Hello World" />
       </list>
     </recent_temporary>
   </component>
@@ -357,6 +357,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Pavline Luther - Lucky 7s.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="54" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Pavline Luther - Guess Game.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -373,21 +380,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Hello World.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1989">
-          <caret line="117" selection-start-line="117" selection-end-line="117" />
+        <state relative-caret-position="276">
+          <caret line="208" column="26" selection-start-line="208" selection-start-column="26" selection-end-line="208" selection-end-column="26" />
           <folding>
-            <marker date="1541610916564" expanded="true" signature="1264:1269" ph="..." />
-            <marker date="1541610916564" expanded="true" signature="1347:1352" ph="..." />
-            <marker date="1541610916564" expanded="true" signature="1452:1497" ph="..." />
-            <marker date="1541610916564" expanded="true" signature="1965:1970" ph="..." />
+            <marker date="1543340888049" expanded="true" signature="1264:1269" ph="..." />
+            <marker date="1543340888049" expanded="true" signature="1347:1352" ph="..." />
+            <marker date="1543340888049" expanded="true" signature="1452:1497" ph="..." />
+            <marker date="1543340888049" expanded="true" signature="1963:1968" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pavline Luther - Lucky 7s.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="34" column="54" lean-forward="true" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
         </state>
       </provider>
     </entry>

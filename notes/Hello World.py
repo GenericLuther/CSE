@@ -148,7 +148,7 @@ print(3 != 4)
 
 a = 3  # A is set to 3
 a == 3  # Is equal to 3?
-
+"""
 # Creating a list
 color = ["blue", "turquoise", "pink", "orange","black", "red", "yellow", "purple", "green"] # USE SQUARE BRACKETS!!!!!
 print(color)
@@ -165,7 +165,7 @@ print(color)
 # Looping through lists
 for item1 in color:
     print(item1)
-"""
+
 shoppinglist = ["TV", "Nintendo", "Phone", "Dinner", "Couch", "DVD Player", "The Second Season Of Spongbob On DVD"]
 shoppinglist[2] = "Bed"
 for item2 in shoppinglist:
@@ -175,3 +175,38 @@ print("The last thing in the list is %s" % shoppinglist[len(shoppinglist) - 1])
 
 # Slicing a list
 print(shoppinglist[1:3])
+
+food_list = ["pizza", "tacos", "oreo", "lollipops", "noodles", "chicken", "beef", "pork", "calzone", "chicken alfredo",
+             "spaghetti", "ravioli", "bacon", "garlic bread", "salad", "cinnamon roll"]
+
+food_list.append("grilled cheese")
+food_list.insert(1, "Eggo waffles")
+food_list.remove("salad")
+print(food_list)
+
+# Tuples
+big_list = ["Doctors", "Person", "Surgical Equipment"]
+big_list.insert(1, "Grape")
+big_list.remove("Person")
+print(big_list)
+
+# Also removing stuff from a list
+print(food_list)
+food_list.pop(8)
+print(food_list)
+
+# Find the index of an item
+print(food_list.index("chicken"))
+
+# Changing things into a list
+string1 = "turquoise"
+list1 = list(string1)
+print(list)
+
+for i in range (len(list1)):  # i goes through all indices
+    if list1[i] == "u":  # if we find a U
+        list1.pop(1)  # remove the i-th index
+        list1.insert(1, "a")  # Put a * there instead
+
+# Turn a list into a string
+print("".join(list1))
