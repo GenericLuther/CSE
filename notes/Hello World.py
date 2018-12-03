@@ -210,3 +210,10 @@ for i in range (len(list1)):  # i goes through all indices
 
 # Turn a list into a string
 print("".join(list1))
+
+# Function Notes
+def pythagorean(a, b):
+    return (a**2 + b**2)**(1/2)
+
+
+print(pythagorean(3, 4))

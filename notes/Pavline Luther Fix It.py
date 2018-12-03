@@ -15,8 +15,7 @@ poem = ("The lovely world"
 "cannot discern the needs of love"
 "nor comprehend passion from intuition"
 "and requires an explanation" 
-"where there is none."
-)
+"where there is none.")
 
 print("--------------")
 print(poem)
