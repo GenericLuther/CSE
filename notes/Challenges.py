@@ -36,3 +36,17 @@ def challenge4(a):
 
 
 print(challenge4(2))
+# 5.
+def challenge5(r):
+    return 3.14159 * r**2
+
+
+print(challenge5(1.1))
+# 6.
+
+
+def challenge6(r):
+    return 4/3 * 3.14159 * r**3
+
+
+print(challenge6(2))
