@@ -37,6 +37,8 @@ def challenge4(a):
 
 print(challenge4(2))
 # 5.
+
+
 def challenge5(r):
     return 3.14159 * r**2
 
@@ -50,3 +52,11 @@ def challenge6(r):
 
 
 print(challenge6(2))
+# 7.
+
+
+def challenge7(n):
+    return n + (n*n) + (n*n*n)
+
+
+print(challenge7(4))
