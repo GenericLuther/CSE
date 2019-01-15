@@ -1,3 +1,4 @@
+import string
 print("Hello World")
 # Single Line Comment
 
@@ -24,3 +25,9 @@ colors.pop(0)
 print(colors)
 print(colors[0])
 print(len(colors))
+
+print(list(string.ascii_letters))
+print(string.digits)
+print(string.punctuation)
+
+

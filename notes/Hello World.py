@@ -203,7 +203,7 @@ string1 = "turquoise"
 list1 = list(string1)
 print(list)
 
-for i in range (len(list1)):  # i goes through all indices
+for i in range(len(list1)):  # i goes through all indices
     if list1[i] == "u":  # if we find a U
         list1.pop(1)  # remove the i-th index
         list1.insert(1, "a")  # Put a * there instead
