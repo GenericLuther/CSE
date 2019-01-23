@@ -1,36 +1,27 @@
 import random
+import string
 
 words = ["dog", "cat", "house", "home", "ball", "bay", "bat", "glass", "cable", "hand", "can", "mad"]  # Word Bank
 answer = random.choice(words)  # Randomly Selects Word From Word Bank
 answer_list = list(answer)
-answer_list2 = []
+answer_letters = []
 word_length = len(answer)  # Length of the Word
 guesses = 8  # Number of Incorrect Guesses Left
 letters = []  # Letters That Have Been Guessed
 print("This Hangman You Know The Rules")
+print("This word has %d letters"% word_length)
 while guesses > 0:
     print(letters)
+    print('_'*word_length)
     letter = input("You Have %d Wrong Guesses Left: " % guesses)
-    if letter in answer:
-        if letter is answer_list[0]:
-            answer_list2.insert(0, letter)
-            if letter is answer_list[1]:
-                answer_list2.insert(1, letter)
-                if letter is answer_list[2]:
-                    answer_list2.insert(2, letter)
-                    if letter is answer_list[3]:
-                        answer_list2.insert(3, letter)
-                        if letter is answer_list[4]:
-                            answer_list2.insert(4, letter)
-                            if letter is answer_list[5]:
-                                answer_list2.insert(5, letter)
-        letters.append(letter)
+    if letter in answer_list:
+        if letter in
     elif letter not in answer:
         print("Nope")
         guesses -= 1
 
         letters.append(letter)
-
+    print(answer_letters)
 
 
 
