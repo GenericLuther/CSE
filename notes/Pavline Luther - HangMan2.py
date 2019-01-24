@@ -12,7 +12,7 @@ print("This word has %d letters" % word_length)
 hidden_answer = ('_'*word_length)
 answer_letters = list(hidden_answer)
 
-while guesses > 0:
+while guesses > 0 or answer_letters is answer_list:
     print(letters)
     print(hidden_answer)
     letter = input("You Have %d Wrong Guesses Left: " % guesses)
@@ -64,12 +64,9 @@ while guesses > 0:
                 if letter is answer_list[2]:
                     answer_letters.pop(2)
                     answer_letters.insert(2, letter)
-                    if letter is answer_list[2]:
-                        answer_letters.pop(2)
-                        answer_letters.insert(2, letter)
-                        if letter is answer_list[3]:
-                            answer_letters.pop(3)
-                            answer_letters.insert(3, letter)
+            if letter is answer_list[2]:
+                answer_letters.pop(2)
+                answer_letters.insert(2, letter)
         if word_length is 5:
                 if letter is answer_list[0]:
                     answer_letters.pop(0)
@@ -122,11 +119,6 @@ while guesses > 0:
     letters.append(letter)
     print(answer_letters)
 
+print("You Did it, You Spelled the Word")
 
-
-
-
-
-
-
-
+print("RIP You Lost")
