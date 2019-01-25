@@ -1,5 +1,4 @@
 import random
-import string
 
 words = ["dog", "cat", "house", "home", "ball", "bay", "bat", "glass", "cable", "hand", "can", "mad"]  # Word Bank
 answer = random.choice(words)  # Randomly Selects Word From Word Bank
@@ -11,11 +10,17 @@ print("This Hangman You Know The Rules")
 print("This word has %d letters" % word_length)
 hidden_answer = ('_'*word_length)
 answer_letters = list(hidden_answer)
-
-while guesses > 0 or answer_letters is answer_list:
-    print(letters)
-    print(hidden_answer)
+playing = True
+while guesses > 0 or playing is True:
+    answer_string = ''.join(answer_letters)
+    print("Letters you have guessed: %s" % letters)
+    print(answer_string)
     letter = input("You Have %d Wrong Guesses Left: " % guesses)
+    letters.append(letter)
+    print(answer_list)
+    print(answer_letters)
+    if answer_letters is answer_list:
+        playing = False
     if letter in answer_list:
         if word_length is 4:
             if letter is answer_list[0]:
@@ -116,8 +121,6 @@ while guesses > 0 or answer_letters is answer_list:
     elif letter not in answer:
         print("Nope")
         guesses -= 1
-    letters.append(letter)
-    print(answer_letters)
 
 print("You Did it, You Spelled the Word")
 
