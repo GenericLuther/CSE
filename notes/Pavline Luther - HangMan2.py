@@ -11,117 +11,32 @@ print("This word has %d letters" % word_length)
 hidden_answer = ('_'*word_length)
 answer_letters = list(hidden_answer)
 playing = True
-while guesses > 0 or playing is True:
+win = False
+while playing is True:
     answer_string = ''.join(answer_letters)
+    if answer_string == answer:
+        playing = False
+        win = True
+        continue
     print("Letters you have guessed: %s" % letters)
+    if letters == answer:
+        playing = False
+        win = True
+        continue
     print(answer_string)
     letter = input("You Have %d Wrong Guesses Left: " % guesses)
     letters.append(letter)
-    print(answer_list)
-    print(answer_letters)
-    if answer_letters is answer_list:
-        playing = False
     if letter in answer_list:
-        if word_length is 4:
-            if letter is answer_list[0]:
-                answer_letters.pop(0)
-                answer_letters.insert(0, letter)
-                if letter is answer_list[1]:
-                    answer_letters.pop(1)
-                    answer_letters.insert(1, letter)
-                    if letter is answer_list[2]:
-                        answer_letters.pop(2)
-                        answer_letters.insert(2, letter)
-                        if letter is answer_list[3]:
-                            answer_letters.pop(3)
-                            answer_letters.insert(3, letter)
-            if letter is answer_list[1]:
-                answer_letters.pop(1)
-                answer_letters.insert(1, letter)
-                if letter is answer_list[2]:
-                    answer_letters.pop(2)
-                    answer_letters.insert(2, letter)
-                    if letter is answer_list[3]:
-                        answer_letters.pop(3)
-                        answer_letters.insert(3, letter)
-            if letter is answer_list[2]:
-                answer_letters.pop(2)
-                answer_letters.insert(2, letter)
-                if letter is answer_list[3]:
-                    answer_letters.pop(3)
-                    answer_letters.insert(3, letter)
-            if letter is answer_list[3]:
-                answer_letters.pop(3)
-                answer_letters.insert(3, letter)
-        if word_length is 3:
-            if letter is answer_list[0]:
-                answer_letters.pop(0)
-                answer_letters.insert(0, letter)
-                if letter is answer_list[1]:
-                    answer_letters.pop(1)
-                    answer_letters.insert(1, letter)
-                    if letter is answer_list[2]:
-                        answer_letters.pop(2)
-                        answer_letters.insert(2, letter)
-            if letter is answer_list[1]:
-                answer_letters.pop(1)
-                answer_letters.insert(1, letter)
-                if letter is answer_list[2]:
-                    answer_letters.pop(2)
-                    answer_letters.insert(2, letter)
-            if letter is answer_list[2]:
-                answer_letters.pop(2)
-                answer_letters.insert(2, letter)
-        if word_length is 5:
-                if letter is answer_list[0]:
-                    answer_letters.pop(0)
-                    answer_letters.insert(0, letter)
-                    if letter is answer_list[1]:
-                        answer_letters.pop(1)
-                        answer_letters.insert(1, letter)
-                        if letter is answer_list[2]:
-                            answer_letters.pop(2)
-                            answer_letters.insert(2, letter)
-                            if letter is answer_list[3]:
-                                answer_letters.pop(3)
-                                answer_letters.insert(3, letter)
-                                if letter is answer_list[4]:
-                                    answer_letters.pop(4)
-                                    answer_letters.insert(4, letter)
-                if letter is answer_list[1]:
-                    answer_letters.pop(1)
-                    answer_letters.insert(1, letter)
-                    if letter is answer_list[2]:
-                        answer_letters.pop(2)
-                        answer_letters.insert(2, letter)
-                        if letter is answer_list[3]:
-                            answer_letters.pop(3)
-                            answer_letters.insert(3, letter)
-                            if letter is answer_list[4]:
-                                answer_letters.pop(4)
-                                answer_letters.insert(4, letter)
-                if letter is answer_list[2]:
-                    answer_letters.pop(2)
-                    answer_letters.insert(2, letter)
-                    if letter is answer_list[3]:
-                        answer_letters.pop(3)
-                        answer_letters.insert(3, letter)
-                        if letter is answer_list[4]:
-                            answer_letters.pop(4)
-                            answer_letters.insert(4, letter)
-                if letter is answer_list[3]:
-                    answer_letters.pop(3)
-                    answer_letters.insert(3, letter)
-                    if letter is answer_list[4]:
-                        answer_letters.pop(4)
-                        answer_letters.insert(4, letter)
-                if letter is answer_list[4]:
-                    answer_letters.pop(4)
-                    answer_letters.insert(4, letter)
+        for i in range(len(answer_list)):
+            if letter is answer_list[i]:
+                answer_letters.pop(i)
+                answer_letters.insert(i, letter)
     elif letter not in answer:
         print("Nope")
         guesses -= 1
-
-print("You Did it, You Spelled the Word")
-
-print("RIP You Lost")
+    if guesses <= 0:
+        playing = False
+if win:
+    print("You Did it, You Spelled the Word")
+else:
+    print("RIP You Lost")
