@@ -1,4 +1,4 @@
-world_map = {
+world_map_example = {
     "R19A": {
         "NAME": "Mr.Wiebe's Room",
         "DESCRIPTION": "This is the classroom you are in right "
@@ -15,13 +15,26 @@ world_map = {
             }
         }
     }
+de_dust2 = {
+    "T_SPAWN": {
+        "NAME": "T Spawn ",
+        "DESCRIPTION": "East is a ramp that leads to two more paths."
+                       "West leads to upper B"
+                       "North goes through a small alley way, going here would be suicide if they are prepared ",
+        "PATHS": {
+            "EAST": 'OUTSIDE_LONG',
+            "WEST": 'UPPER_B',
+            "NORTH": 'SUICIDE'
+            }
+    }
 
+}
 # Controller
 playing = True
-current_node = world_map['R19A']
+current_node = world_map_example['R19A']
 while playing:
     print(current_node['NAME'])
-    print(current_node['DESCRIPION'])
+    print(current_node['DESCRIPTION'])
     command = input(">_")
-    if command.lower () in ['q', 'quit', 'exit']:
+    if command.lower() in ['q', 'quit', 'exit']:
         playing = False
