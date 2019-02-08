@@ -46,7 +46,7 @@ de_dust2 = {
                        "West of you is mid"
                        "South is T spawn",
         "PATHS": {
-            "WEST": 'TOP_OF_MID',
+            "WEST": 'TOP_MID',
             "NORTH": 'BLUE',
             "SOUTH": 'T_SPAWN'
         }
@@ -163,13 +163,77 @@ de_dust2 = {
         }
     },
     "TOP_MID": {
-        "NAME": "",
-        "DESCRIPTION": "",
+        "NAME": "Top of Mid",
+        "DESCRIPTION": "You are on the top of mid"
+                       "If you go south you can go outside of long"
+                       "East of you is catwalk"
+                       "North of you is mid",
         "PATHS": {
-            "EAST": '',
-            "WEST": '',
-            "NORTH": '',
-            "SOUTH": ''
+            "EAST": 'CATWALK',
+            "NORTH": 'MID',
+            "SOUTH": 'OUTSIDE_LONG'
+        }
+    },
+    "MID": {
+        "NAME": "Mid",
+        "DESCRIPTION": "You are in the middle of the map that connects to other pathways."
+                       "North of you is mid doors to CT mid"
+                       "West of you is lower tunnels"
+                       "South is top of mid"
+                       "If you East you can jump onto xbox to get on catwalk",
+        "PATHS": {
+            "EAST": 'CATWALK',
+            "WEST": 'LOWER_TUNS',
+            "NORTH": 'CT_MID',
+            "SOUTH": 'TOP_MID'
+        }
+    },
+    "CT_MID": {
+        "NAME": "CT Mid",
+        "DESCRIPTION": "You are in CT mid with a narrow view all the way to T spawn"
+                       "South of you is mid"
+                       "West of you B doors"
+                       "North of you is a window into B"
+                       "East of you is CT spawn",
+        "PATHS": {
+            "EAST": 'CT_SPAWN',
+            "WEST": 'B_DOORS',
+            "NORTH": 'WINDOW',
+            "SOUTH": 'MID'
+        }
+    },
+    "CT_SPAWN": {
+        "NAME": "CT Spawn",
+        "DESCRIPTION": "You are in CT Spawn. You have paths that will take you right to site."
+                       "West of you is CT mid"
+                       "East of you is CT ramp",
+        "PATHS": {
+            "EAST": 'CT_RAMP',
+            "WEST": 'CT_MID'
+        }
+    },
+    "CT_RAMP": {
+        "NAME": "CT Ramp",
+        "DESCRIPTION": "You are on CT ramp."
+                       "East of you is long"
+                       "West of you is CT spawn",
+        "PATHS": {
+            "EAST": 'LONG',
+            "WEST": 'CT_SPAWN'
+        }
+    },
+    "B_DOORS":{
+        "NAME": "B Doors",
+        "DESCRIPTION": "You are in B doors"
+                       "North of you is  B site"
+                       "South of you is a car"
+                       "East of you is CT mid"
+                       "If you go west you will go in front of upper tuns",
+        "PATHS": {
+            "EAST": 'CT_MID',
+            "WEST": 'INFRONT OF TUNS',
+            "NORTH": 'B_SITE',
+            "SOUTH": 'CAR2'
         }
     }
 
