@@ -1,4 +1,4 @@
-import Special Random
+import Special_Random
 
 
 class Phone(object):
@@ -42,12 +42,12 @@ class Phone(object):
 my_phone = Phone("ATT", 100)
 your_phone = Phone("bell", 0)
 default_phone = Phone("Verizon")
-
+"""
 my_phone.make_call(60)
 my_phone.make_call(10)
 my_phone.charge(100)
 my_phone.make_call(10)
 your_phone.smash_phone()
 your_phone.make_call(1)
-
+"""
 print(Special_Random.RandomWiebe.myrandom())
