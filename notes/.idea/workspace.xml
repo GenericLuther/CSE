@@ -40,6 +40,7 @@
           <entry key="project.open.time.45" value="1" />
           <entry key="project.open.time.46" value="1" />
           <entry key="project.open.time.49" value="2" />
+          <entry key="project.open.time.50" value="1" />
           <entry key="project.open.time.56" value="3" />
           <entry key="project.open.time.58" value="1" />
           <entry key="project.open.time.65" value="2" />
@@ -47,14 +48,14 @@
           <entry key="project.open.time.70" value="2" />
           <entry key="project.open.time.74" value="1" />
           <entry key="project.open.time.89" value="1" />
-          <entry key="project.opened" value="34" />
+          <entry key="project.opened" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="33" />
-          <entry key="py" value="12139" />
+          <entry key="py" value="12771" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -70,7 +71,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="33" />
-          <entry key="Python" value="12139" />
+          <entry key="Python" value="12771" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -103,8 +104,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pavline Luther - Object Class.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
+            <state relative-caret-position="543">
+              <caret line="54" column="27" lean-forward="true" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
               <folding>
                 <marker date="1550252487280" expanded="true" signature="19:24" ph="..." />
               </folding>
@@ -115,10 +116,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Pavline Luther - World Map OOP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+            <state relative-caret-position="526">
+              <caret line="37" column="67" selection-start-line="37" selection-start-column="67" selection-end-line="37" selection-end-column="67" />
               <folding>
-                <marker date="1550771072911" expanded="true" signature="19:24" ph="..." />
+                <marker date="1550857519981" expanded="true" signature="19:24" ph="..." />
               </folding>
             </state>
           </provider>
@@ -167,7 +168,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="697" />
     <option name="height" value="371" />
@@ -446,8 +447,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Pavline Luther - Object Class.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
+        <state relative-caret-position="543">
+          <caret line="54" column="27" lean-forward="true" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
           <folding>
             <marker date="1550252487280" expanded="true" signature="19:24" ph="..." />
           </folding>
@@ -456,10 +457,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Pavline Luther - World Map OOP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+        <state relative-caret-position="526">
+          <caret line="37" column="67" selection-start-line="37" selection-start-column="67" selection-end-line="37" selection-end-column="67" />
           <folding>
-            <marker date="1550771072911" expanded="true" signature="19:24" ph="..." />
+            <marker date="1550857519981" expanded="true" signature="19:24" ph="..." />
           </folding>
         </state>
       </provider>
