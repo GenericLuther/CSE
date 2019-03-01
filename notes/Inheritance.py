@@ -40,8 +40,8 @@ class Impala(Car):
 
 
 class KeylessCar(Car):
-    def __init__(self):
-        super(KeylessCar, self).__init__(name,mileage)
+    def __init__(self, name, mileage):
+        super(KeylessCar, self).__init__(name, mileage)
 
     def start_engine(self):
         self.engine_statue = True
