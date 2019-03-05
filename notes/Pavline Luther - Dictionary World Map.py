@@ -9,7 +9,8 @@ world_map_example = {
         },
     "PARKING_LOT": {
         "NAME": " The North Parking Lot",
-        "DESCRIPTION": "There are a couple cars parked here.",
+        "DESCRIPTION": "There are a couple cars parked here."
+                       "",
         "PATHS": {
             "SOUTH": 'R19A'
             }
