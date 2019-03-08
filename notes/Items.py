@@ -117,4 +117,3 @@ class Boom_Boom(Demonitizer):
 
 
 players_BOOMBOOM = Boom_Boom
-players_BOOMBOOM.range
