@@ -10,13 +10,15 @@ class Room(object):
 
 
 class Ability(object):
-    def __init__(self, name):
+    def __init__(self, name, ability_length):
         self.name = name
+        self.abilitylength = ability_length
 
 
 class Fire(Ability):
     def __init__(self, name, fire):
         super(Fire, self).__init__(name)
+        while AbilityLength
 
 
 class Item(object):
@@ -89,9 +91,8 @@ class Throwable(Weapon):
         self.damage = damage
         self.ability = ability
 
-
     def throwable(self):
-        print("You have %s" % Throwable.ammo)
+        print("You have %s %s" % (self.ammo, self.name))
 
 
 class Clothing(Item):
@@ -125,7 +126,6 @@ class Leggings(Clothing):
         self.flexibility = flexibility
 
 
-
 """
 class Helmet(Clothing):
     def __init__(self, name, fast_travel):
@@ -134,10 +134,18 @@ class Helmet(Clothing):
 
 
 class Boomboom(Demonitizer):
-    def __init__(self): super(Boomboom, self).__init__('BoomBoom', 10, 70, 50, None)
+    def __init__(self):
+        super(Boomboom, self).__init__('BoomBoom', 10, 70, 50, None)
 
 
-Luthers_demonitizer = Boomboom
+class GasBubble(Throwable):
+    def __init__(self):
+        super(GasBubble, self).__init__('Gas Bubbles', 7, 15, None)
+
+
+Luthers_throwable = GasBubble()
+Luthers_demonitizer = Boomboom()
+Luthers_throwable.throwable()
 
 
 class Player(object):
@@ -220,5 +228,3 @@ while playing:
             print("I can't go that way!")
     else:
             print("Command Not Found")
-
-
