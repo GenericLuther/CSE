@@ -10,15 +10,17 @@ class Room(object):
 
 
 class Ability(object):
-    def __init__(self, name, ability_length):
+    def __init__(self, name):
         self.name = name
-        self.abilitylength = ability_length
 
 
 class Fire(Ability):
-    def __init__(self, name, fire):
+    def __init__(self, name, ability_length):
         super(Fire, self).__init__(name)
-        while AbilityLength
+        self.ability_length = ability_length
+        self.damage = 5
+        while self.ability_length >= 0:
+            self.ability_length -= 1
 
 
 class Item(object):
@@ -27,17 +29,24 @@ class Item(object):
 
 
 class Consumable(Item):
-    def __init__(self, name):
+    def __init__(self, name, heal):
         super(Consumable, self).__init__(name)
         self.name = name
+        self.heal = heal
 
 
 class Potion(Consumable):
-    def __init__(self, name, heal, buff, debuff):
+    def __init__(self, name, heal, buff, debuff, amount):
         super(Potion, self).__init__(name)
         self.heal = heal
         self.buff = buff
         self.debuff = debuff
+        self.hunger = 0
+        self.amount = amount
+
+    def consume(self):
+        self.amount -= 1
+        print("You gained %s health" % self.heal)
 
 
 class Food(Consumable):
