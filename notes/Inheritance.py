@@ -57,3 +57,10 @@ jacob_car.move_forward()
 jacob_car.turn_left()
 jacob_car.move_forward()
 jacob_car.turn_off()
+
+class Character(object):
+    def __init__(self, name, health, weapon, clothes):
+        self.name = name
+        self.health = health
+        self.weapon = weapon
+        self.clothes = clothes

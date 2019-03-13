@@ -117,3 +117,28 @@ class Boom_Boom(Demonitizer):
 
 
 players_BOOMBOOM = Boom_Boom
+
+
+class Character(object):
+    def __init__(self, name: str, health: int, weapon, clothes):
+        self.name = name
+        self.health = health
+        self.weapon = weapon
+        self.clothes = clothes
+
+        def take_damage(self, damage: int):
+            self.health -= damage * self.clothes.protection
+            print("%s had %d left" % (self.name, self.health))
+
+        def attack(self, target):
+            print("%s attacks %s for %d damage" % (self.name, target.name, self.weapon.damage))
+            target.take_damage(self.weapon.damage)
+
+
+sword = Sword("Sword", 100, 20, None)
+gold_chestplate = ChestPlate("Golden ChestPlate", .80, 70, None)
+
+skeleton = Character("Skelly Boy", 120, sword, gold_chestplate)
+blubber_boy = Character("Blubber Boy", 250, sword, None)
+skeleton.attack(blubber_boy)
+blubber_boy.attack(skeleton)
