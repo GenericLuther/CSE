@@ -64,3 +64,4 @@ class Character(object):
         self.health = health
         self.weapon = weapon
         self.clothes = clothes
+

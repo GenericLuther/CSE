@@ -64,10 +64,11 @@ class Weapon(Item):
 
 
 class Sword(Weapon):
-    def __init__(self, name, durability, damage, ability):
+    def __init__(self, name, durability, damage, penetration, ability):
         super(Sword, self).__init__(name)
         self.durability = durability
         self.damage = damage
+        self.penetration = penetration
         self.ability = ability
 
 
@@ -155,6 +156,37 @@ class GasBubble(Throwable):
 Luthers_throwable = GasBubble()
 Luthers_demonitizer = Boomboom()
 Luthers_throwable.throwable()
+
+
+class Character(object):
+    def __init__(self, name: str, health: int, weapon, clothes):
+        self.name = name
+        self.health = health
+        self.weapon = weapon
+        self.clothes = clothes
+
+    def take_damage(self, damage: int, penetration: int):
+        if self.clothes is None:
+            self.health -= damage
+        else:
+            self.health -= damage * (self.clothes.protection + self.weapon.)
+        print("%s had %d left" % (self.name, self.health))
+
+    def attack(self, target):
+        print("%s attacks %s for %d damage" % (self.name, target.name, self.weapon.damage))
+        target.take_damage(self.weapon.damage)
+
+
+wood_sword = Sword("Sword", 50, 20, 0, None)
+iron_sword = Sword("Sword", 100, 20, .10, None)
+gold_chestplate = ChestPlate("Golden ChestPlate", .80, 70, None)
+
+skeleton = Character("Skelly Boy", 120, iron_sword, gold_chestplate)
+skeleton2 = Character("Spooky Boy", 120, wood_sword, gold_chestplate)
+blubber_boy = Character("Blubber Boy", 250, wood_sword, None)
+skeleton.attack(blubber_boy)
+blubber_boy.attack(skeleton)
+skeleton2.attack(skeleton)
 
 
 class Player(object):
