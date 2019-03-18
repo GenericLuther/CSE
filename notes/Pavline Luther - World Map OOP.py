@@ -9,6 +9,7 @@ class Room(object):
         self.description = description
 
 
+# Items
 class Ability(object):
     def __init__(self, name):
         self.name = name
@@ -29,13 +30,13 @@ class Item(object):
 
 
 class Consumable(Item):
-    def __init__(self, name, heal):
+    def __init__(self, name):
         super(Consumable, self).__init__(name)
 
 
 class Potion(Consumable):
     def __init__(self, name, heal, buff, debuff, amount):
-        super(Potion, self).__init__(name, 5)
+        super(Potion, self).__init__(name)
         self.heal = heal
         self.buff = buff
         self.debuff = debuff
@@ -139,22 +140,16 @@ class Helmet(Clothing):
         super(Helmet, self).__init__(name)
 """
 
-
-class Boomboom(Demonitizer):
-    def __init__(self):
-        super(Boomboom, self).__init__('BoomBoom', 10, 70, 50, None)
-
-
-class GasBubble(Throwable):
-    def __init__(self):
-        super(GasBubble, self).__init__('Gas Bubbles', 7, 15, None)
+hackermans_chestplate = ChestPlate("Hacker_Mans_Chestplate", 0, -1, None)
+wood_sword = Sword("Sword", 50, 20, 0, None)
+iron_sword = Sword("Sword", 100, 20, .10, None)
+gold_chestplate = ChestPlate("Golden ChestPlate", .80, 70, None)
+hackermans_sword = Sword("HM_Sword", -1, 42069, 1, None)
+wood_board = Shield("Wood Board", .10, 50, 5, 0, None)
+generations_sword = Sword("The Sword Of Many Generations",9999999, 70, .40, None)
 
 
-Luthers_throwable = GasBubble()
-Luthers_demonitizer = Boomboom()
-Luthers_throwable.throwable()
-
-
+# Character
 class Character(object):
     def __init__(self, name: str, health: int, weapon, clothes):
         self.name = name
@@ -162,11 +157,15 @@ class Character(object):
         self.weapon = weapon
         self.clothes = clothes
 
-    def take_damage(self, damage: int, penetration: int, durability):
+    def take_damage(self, damage: int):
         if self.clothes is None:
             self.health -= damage
+            if self.health <= 0:
+                print("You killed it")
         else:
-            self.health -= damage * self.clothes.protection
+            self.health -= damage * (self.clothes.protection)
+            if self.health <= 0:
+                print("You killed it")
         print("%s had %d left" % (self.name, self.health))
 
     def attack(self, target):
@@ -174,19 +173,15 @@ class Character(object):
         target.take_damage(self.weapon.damage)
 
 
-hackermans_chestplate = ChestPlate("Hacker_Mans_Chestplate", 0, -1, None)
-wood_sword = Sword("Sword", 50, 20, 0, None)
-iron_sword = Sword("Sword", 100, 20, .10, None)
-gold_chestplate = ChestPlate("Golden ChestPlate", .80, 70, None)
-hackermans_sword = Sword("HM_Sword", -1, 42069, 1, None)
-
 skeleton = Character("Skelly Boy", 120, iron_sword, gold_chestplate)
 skeleton2 = Character("Spooky Boy", 120, wood_sword, gold_chestplate)
 blubber_boy = Character("Blubber Boy", 250, wood_sword, None)
 skeleton.attack(blubber_boy)
 blubber_boy.attack(skeleton)
 skeleton2.attack(skeleton)
-hacker = Character("Hacker", -1, )
+hacker = Character("Hacker", 0, hackermans_sword, hackermans_chestplate)
+hacker.attack(blubber_boy)
+
 
 class Player(object):
     def __init__(self, starting_location):
