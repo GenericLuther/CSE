@@ -1,29 +1,6 @@
-class Room(object):
-    def __init__(self, name, east, north, south, west, northeast, description):
-        self.name = name
-        self.north = north
-        self.south = south
-        self.east = east
-        self.west = west
-        self.northeast = northeast
-        self.description = description
 
 
 # Items
-class Ability(object):
-    def __init__(self, name):
-        self.name = name
-
-
-class Fire(Ability):
-    def __init__(self, name, ability_length):
-        super(Fire, self).__init__(name)
-        self.ability_length = ability_length
-        self.damage = 5
-        while self.ability_length >= 0:
-            self.ability_length -= 1
-
-
 class Item(object):
     def __init__(self, name):
         self.name = name
@@ -146,7 +123,10 @@ iron_sword = Sword("Sword", 100, 20, .10, None)
 gold_chestplate = ChestPlate("Golden ChestPlate", .80, 70, None)
 hackermans_sword = Sword("HM_Sword", -1, 42069, 1, None)
 wood_board = Shield("Wood Board", .10, 50, 5, 0, None)
-generations_sword = Sword("The Sword Of Many Generations",9999999, 70, .40, None)
+generations_sword = Sword("The Sword Of Many Generations", 9999999, 70, .40, None)
+DragonLore = Demonitizer("DragonLore", 10, .5, 115, None, None)
+Bazinga = Throwable("Bazinga", 1, 730, None, None)
+Skraaa = Demonitizer("The Skraaa", 50, 1, 25, None, None)
 
 
 # Character
@@ -163,7 +143,7 @@ class Character(object):
             if self.health <= 0:
                 print("You killed it")
         else:
-            self.health -= damage * (self.clothes.protection)
+            self.health -= damage * self.clothes.protection
             if self.health <= 0:
                 print("You killed it")
         print("%s had %d left" % (self.name, self.health))
@@ -181,6 +161,17 @@ blubber_boy.attack(skeleton)
 skeleton2.attack(skeleton)
 hacker = Character("Hacker", 0, hackermans_sword, hackermans_chestplate)
 hacker.attack(blubber_boy)
+
+
+class Room(object):
+    def __init__(self, name, east, north, south, west, northeast, description):
+        self.name = name
+        self.north = north
+        self.south = south
+        self.east = east
+        self.west = west
+        self.northeast = northeast
+        self.description = description
 
 
 class Player(object):
