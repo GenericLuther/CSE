@@ -124,9 +124,12 @@ gold_chestplate = ChestPlate("Golden ChestPlate", .80, 70, None)
 hackermans_sword = Sword("HM_Sword", -1, 42069, 1, None)
 wood_board = Shield("Wood Board", .10, 50, 5, 0, None)
 generations_sword = Sword("The Sword Of Many Generations", 9999999, 70, .40, None)
-DragonLore = Demonitizer("DragonLore", 10, .5, 115, None, None)
+DragonLore = Demonitizer("DragonLore", 10, 50, 115, None, None)
 Bazinga = Throwable("Bazinga", 1, 730, None, None)
-Skraaa = Demonitizer("The Skraaa", 50, 1, 25, None, None)
+Skraaa = Demonitizer("The Skraaa", 20, 90, 25, None, None)
+Dynamite = Throwable("Sticks of Dynamite", 3, 50, None, None)
+LMT = Demonitizer("Light Machine Thrower", 45, 40, 40, None, None)
+Elon_Musket = Demonitizer("A Elon Musket", 20, 10, 250, None, None)
 
 
 # Character
@@ -156,11 +159,8 @@ class Character(object):
 skeleton = Character("Skelly Boy", 120, iron_sword, gold_chestplate)
 skeleton2 = Character("Spooky Boy", 120, wood_sword, gold_chestplate)
 blubber_boy = Character("Blubber Boy", 250, wood_sword, None)
-skeleton.attack(blubber_boy)
-blubber_boy.attack(skeleton)
-skeleton2.attack(skeleton)
-hacker = Character("Hacker", 0, hackermans_sword, hackermans_chestplate)
-hacker.attack(blubber_boy)
+hacker = Character("Hacker", 9999, hackermans_sword, hackermans_chestplate)
+blubber_boy.attack(hacker)
 
 
 class Room(object):
@@ -248,8 +248,8 @@ while playing:
         playing = False
     elif command.lower() in directions:
         try:
-            next_room = player.find_next_room(command)
-            current_location = next_room
+            next_room = player.find_next_room(command.lower())
+            player.move(next_room)
         except KeyError:
             print("I can't go that way!")
     else:
