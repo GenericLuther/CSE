@@ -117,18 +117,28 @@ class Helmet(Clothing):
         super(Helmet, self).__init__(name)
 """
 
+# Chest Plates
 hackermans_chestplate = ChestPlate("Hacker_Mans_Chestplate", 0, -1, None)
+gold_chestplate = ChestPlate("Golden ChestPlate", .80, 70, None)
+chainmail_chestplate = ChestPlate("Chainmail ChestPlate", .80, 100, None)
+kevlar_chestPlate = ChestPlate("Kevlar Chestplate", .60, 200, None)
+
+# Melee Weapons
 wood_sword = Sword("Sword", 50, 20, 0, None)
 iron_sword = Sword("Sword", 100, 20, .10, None)
-gold_chestplate = ChestPlate("Golden ChestPlate", .80, 70, None)
 hackermans_sword = Sword("HM_Sword", -1, 42069, 1, None)
 wood_board = Shield("Wood Board", .10, 50, 5, 0, None)
 generations_sword = Sword("The Sword Of Many Generations", 9999999, 70, .40, None)
-DragonLore = Demonitizer("DragonLore", 10, 50, 115, None, None)
+
+
+# Throwables
 Bazinga = Throwable("Bazinga", 1, 730, None, None)
-Skraaa = Demonitizer("The Skraaa", 20, 90, 25, None, None)
 Dynamite = Throwable("Sticks of Dynamite", 3, 50, None, None)
-LMT = Demonitizer("Light Machine Thrower", 45, 40, 40, None, None)
+
+# Demonitizers
+DragonLore = Demonitizer("DragonLore", 10, 50, 115, None, None)
+Skraaa = Demonitizer("The Skraaa", 20, 90, 25, None, None)
+LMB = Demonitizer("Light Machine Blaster", 45, 40, 40, None, None)
 Elon_Musket = Demonitizer("A Elon Musket", 20, 10, 250, None, None)
 
 
@@ -141,19 +151,25 @@ class Character(object):
         self.clothes = clothes
 
     def take_damage(self, damage: int):
+        finaldamage = damage * self.clothes.protection
         if self.clothes is None:
             self.health -= damage
             if self.health <= 0:
                 print("You killed it")
         else:
-            self.health -= damage * self.clothes.protection
+            self.health -= finaldamage
             if self.health <= 0:
                 print("You killed it")
         print("%s had %d left" % (self.name, self.health))
 
-    def attack(self, target):
-        print("%s attacks %s for %d damage" % (self.name, target.name, self.weapon.damage))
-        target.take_damage(self.weapon.damage)
+    def attack(self, target, damage: int):
+        finaldamage = self.weapon.damage * self.clothes.protection
+        if self.clothes is None:
+            print("%s attacks %s for %d damage" % (self.name, target.name, self.weapon.damage))
+            target.take_damage(self.weapon.damage)
+        else:
+            print("%s attacks %s for %d damage" % (self.name, target.name, finaldamage))
+            target.take_damage(self.weapon.damage)
 
 
 skeleton = Character("Skelly Boy", 120, iron_sword, gold_chestplate)
@@ -175,6 +191,7 @@ class Room(object):
 
 
 class Player(object):
+
     def __init__(self, starting_location):
         self.current_location = starting_location
         self.inventory = []
