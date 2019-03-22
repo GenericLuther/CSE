@@ -151,24 +151,22 @@ class Character(object):
         self.clothes = clothes
 
     def take_damage(self, damage: int):
-        finaldamage = damage * self.clothes.protection
         if self.clothes is None:
             self.health -= damage
             if self.health <= 0:
                 print("You killed it")
         else:
-            self.health -= finaldamage
+            self.health -= self.weapon.damage * self.clothes.protection
             if self.health <= 0:
                 print("You killed it")
         print("%s had %d left" % (self.name, self.health))
 
     def attack(self, target, damage: int):
-        finaldamage = self.weapon.damage * self.clothes.protection
         if self.clothes is None:
             print("%s attacks %s for %d damage" % (self.name, target.name, self.weapon.damage))
             target.take_damage(self.weapon.damage)
         else:
-            print("%s attacks %s for %d damage" % (self.name, target.name, finaldamage))
+            print("%s attacks %s for %d damage" % (self.name, target.name, self.weapon.damage))
             target.take_damage(self.weapon.damage)
 
 
