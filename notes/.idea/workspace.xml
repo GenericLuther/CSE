@@ -74,17 +74,18 @@
           <entry key="project.open.time.71" value="1" />
           <entry key="project.open.time.74" value="1" />
           <entry key="project.open.time.77" value="1" />
+          <entry key="project.open.time.78" value="1" />
           <entry key="project.open.time.82" value="1" />
           <entry key="project.open.time.84" value="1" />
           <entry key="project.open.time.89" value="1" />
-          <entry key="project.opened" value="54" />
+          <entry key="project.opened" value="55" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="33" />
-          <entry key="py" value="21260" />
+          <entry key="py" value="21525" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -100,7 +101,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="33" />
-          <entry key="Python" value="21260" />
+          <entry key="Python" value="21525" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -145,8 +146,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Pavline Luther - World Map OOP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="152" column="39" selection-start-line="152" selection-start-column="39" selection-end-line="152" selection-end-column="39" />
+            <state relative-caret-position="315">
+              <caret line="272" column="15" selection-start-line="272" selection-start-column="15" selection-end-line="272" selection-end-column="15" />
+              <folding>
+                <marker date="1553532283966" expanded="true" signature="5802:5807" ph="..." />
+                <marker date="1553532283966" expanded="true" signature="6075:6081" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -569,8 +574,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Pavline Luther - World Map OOP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="152" column="39" selection-start-line="152" selection-start-column="39" selection-end-line="152" selection-end-column="39" />
+        <state relative-caret-position="315">
+          <caret line="272" column="15" selection-start-line="272" selection-start-column="15" selection-end-line="272" selection-end-column="15" />
+          <folding>
+            <marker date="1553532283966" expanded="true" signature="5802:5807" ph="..." />
+            <marker date="1553532283966" expanded="true" signature="6075:6081" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
