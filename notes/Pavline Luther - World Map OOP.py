@@ -132,14 +132,14 @@ generations_sword = Sword("The Sword Of Many Generations", 9999999, 70, .40, Non
 
 
 # Throwables
-Bazinga = Throwable("Bazinga", 1, 730, None, None)
-Dynamite = Throwable("Sticks of Dynamite", 3, 50, None, None)
+bazinga = Throwable("Bazinga", 1, 730, None, None)
+dynamite = Throwable("Sticks of Dynamite", 3, 50, None, None)
 
 # Demonitizers
-DragonLore = Demonitizer("DragonLore", 10, 50, 115, None, None)
-Skraaa = Demonitizer("The Skraaa", 20, 90, 25, None, None)
-LMB = Demonitizer("Light Machine Blaster", 45, 40, 40, None, None)
-Elon_Musket = Demonitizer("A Elon Musket", 20, 10, 250, None, None)
+dragonlore = Demonitizer("DragonLore", 10, 50, 115, None, None)
+skraaa = Demonitizer("The Skraaa", 20, 90, 25, None, None)
+lmb = Demonitizer("Light Machine Blaster", 45, 40, 40, None, None)
+elon_musket = Demonitizer("A Elon Musket", 20, 10, 250, None, None)
 
 # Potions
 HealthPotion1 = Potion("Level 1 Health Potion", 50, None, None, 1)
@@ -178,7 +178,7 @@ blubber_boy = Character("Blubber Boy", 250, wood_sword, None)
 hacker = Character("Hacker", 9999, hackermans_sword, hackermans_chestplate)
 blubber_boy.attack(hacker)
 
-
+# Room/Player
 class Room(object):
     def __init__(self, name, east, north, south, west, northeast, description, items):
         self.name = name
@@ -228,7 +228,7 @@ parking_lot = Room("Parking Lot", None, 'R19A', None, None)
 T_Spawn = Room("T Spawn", 'outside_long', 'top_mid', None, 'upper_b', None, "You are in T Spawn, East of you is "
                                                                             "outside of long, North is top of mid"
                                                                             "West leads to upper b",
-               [])
+               [generations_sword])
 outside_long = Room("Outside of Long", None, 'blue', 'T_Spawn', 'top_mid', None, "You are outside of long, North of you"
                                                                                  "is blue, South goes to T Spawn, and "
                                                                                  "West goes to the top of mid",
@@ -240,7 +240,7 @@ long = Room("Long", None, 'ramp', 'blue', 'ct_ramp', None, "You're on a long pat
                                                            "and West is CT  ramp",
             [])
 ramp = Room("Ramp", None, None, 'long', 'a_site', None, "You're on a ramp, South is long and West is A SITE",
-            [DragonLore])
+            [dragonlore])
 a_site = Room("A SITE", 'ramp', None, 'ct_ramp', 'a_plat', None, "You're on A SITE, East is ramp, you can drop South "
                                                                  "onto CT ramp, and west is A plat",
               [])
@@ -277,14 +277,22 @@ player = Player(T_Spawn)
 playing = True
 directions = ['north', 'south', 'east', 'west', 'northeast', 'up', 'down']
 grab = ['grab', 'take']
+chckinv = ['inventory', 'items', 'check inventory']
 while playing:
     print(player.current_location.name)
     print(player.current_location.description)
     command = input(">_")
     if command.lower() in ('q', 'quit', 'exit'):
         playing = False
+    elif command.lower() in chckinv:
+        print(player.inventory)
     elif command.lower() in grab:
-        
+        try:
+            player.current_location.items.remove(command)
+            player.inventory.append(command)
+        except KeyError:
+            print("There is no such item!")
+
     elif command.lower() in directions:
         try:
             next_room = player.find_next_room(command.lower())
