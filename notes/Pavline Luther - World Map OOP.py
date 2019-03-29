@@ -144,6 +144,7 @@ elon_musket = Demonitizer("A Elon Musket", 20, 10, 250, None, None)
 # Potions
 HealthPotion1 = Potion("Level 1 Health Potion", 50, None, None, 1)
 
+
 # Character
 class Character(object):
     def __init__(self, name: str, health: int, weapon, clothes):
@@ -177,6 +178,7 @@ skeleton2 = Character("Spooky Boy", 120, wood_sword, gold_chestplate)
 blubber_boy = Character("Blubber Boy", 250, wood_sword, None)
 hacker = Character("Hacker", 9999, hackermans_sword, hackermans_chestplate)
 blubber_boy.attack(hacker)
+
 
 # Room/Player
 class Room(object):
@@ -278,6 +280,7 @@ playing = True
 directions = ['north', 'south', 'east', 'west', 'northeast', 'up', 'down']
 grab = ['grab', 'take']
 chckinv = ['inventory', 'items', 'check inventory']
+current_rooms_inventory = "boom"
 while playing:
     print(player.current_location.name)
     print(player.current_location.description)
@@ -288,7 +291,7 @@ while playing:
         print(player.inventory)
     elif command.lower() in grab:
         try:
-            player.current_location.items.remove(command)
+            Room.items.remove(command)
             player.inventory.append(command)
         except KeyError:
             print("There is no such item!")

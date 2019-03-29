@@ -74,20 +74,21 @@
           <entry key="project.open.time.70" value="2" />
           <entry key="project.open.time.71" value="1" />
           <entry key="project.open.time.74" value="1" />
+          <entry key="project.open.time.75" value="1" />
           <entry key="project.open.time.76" value="1" />
           <entry key="project.open.time.77" value="1" />
           <entry key="project.open.time.78" value="1" />
           <entry key="project.open.time.82" value="1" />
           <entry key="project.open.time.84" value="1" />
           <entry key="project.open.time.89" value="1" />
-          <entry key="project.opened" value="58" />
+          <entry key="project.opened" value="59" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="33" />
-          <entry key="py" value="22062" />
+          <entry key="py" value="22147" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -103,7 +104,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="33" />
-          <entry key="Python" value="22062" />
+          <entry key="Python" value="22147" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -157,11 +158,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Pavline Luther - World Map OOP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="230" column="33" selection-start-line="230" selection-start-column="33" selection-end-line="230" selection-end-column="33" />
+            <state relative-caret-position="2107">
+              <caret line="305" selection-start-line="305" selection-end-line="305" />
               <folding>
-                <marker date="1553791365711" expanded="true" signature="5880:5885" ph="..." />
-                <marker date="1553791365711" expanded="true" signature="6028:6033" ph="..." />
+                <marker date="1553879882355" expanded="true" signature="5882:5887" ph="..." />
+                <marker date="1553879882355" expanded="true" signature="6030:6035" ph="..." />
               </folding>
             </state>
           </provider>
@@ -435,6 +436,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.28971255" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -591,11 +593,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Pavline Luther - World Map OOP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="230" column="33" selection-start-line="230" selection-start-column="33" selection-end-line="230" selection-end-column="33" />
+        <state relative-caret-position="2107">
+          <caret line="305" selection-start-line="305" selection-end-line="305" />
           <folding>
-            <marker date="1553791365711" expanded="true" signature="5880:5885" ph="..." />
-            <marker date="1553791365711" expanded="true" signature="6028:6033" ph="..." />
+            <marker date="1553879882355" expanded="true" signature="5882:5887" ph="..." />
+            <marker date="1553879882355" expanded="true" signature="6030:6035" ph="..." />
           </folding>
         </state>
       </provider>
