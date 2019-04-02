@@ -1,5 +1,4 @@
 import random
-import string
 
 words = ["dog", "cat", "house", "home", "ball", "bay", "bat", "glass", "cable", "hand", "can", "mad"]  # Word Bank
 answer = random.choice(words)  # Randomly Selects Word From Word Bank

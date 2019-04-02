@@ -199,6 +199,10 @@ class Player(object):
         self.health = 150
         self.inventory = []
 
+    def take(self):
+        self.inventory.append(command.lower())
+        self.current_location.items
+
     def find_next_room(self, direction):
         """This method searches the current room to use if a room exists in that direction
 
@@ -291,8 +295,7 @@ while playing:
         print(player.inventory)
     elif command.lower() in grab:
         try:
-            Room.items.remove(command)
-            player.inventory.append(command)
+            player.take()
         except KeyError:
             print("There is no such item!")
 
