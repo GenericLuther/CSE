@@ -177,12 +177,13 @@ skeleton = Character("Skelly Boy", 120, iron_sword, gold_chestplate)
 skeleton2 = Character("Spooky Boy", 120, wood_sword, gold_chestplate)
 blubber_boy = Character("Blubber Boy", 250, wood_sword, None)
 hacker = Character("Hacker", 9999, hackermans_sword, hackermans_chestplate)
-blubber_boy.attack(hacker)
 
 
 # Room/Player
 class Room(object):
-    def __init__(self, name, east, north, south, west, northeast, description, items):
+    def __init__(self, name, east, north, south, west, northeast, description, items=None):
+        if items is None:
+            items = []
         self.name = name
         self.north = north
         self.south = south
@@ -201,7 +202,6 @@ class Player(object):
 
     def take(self):
         self.inventory.append(command.lower())
-        self.current_location.items
 
     def find_next_room(self, direction):
         """This method searches the current room to use if a room exists in that direction
