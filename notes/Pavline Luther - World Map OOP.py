@@ -118,7 +118,7 @@ class Helmet(Clothing):
 """
 
 # Chest Plates
-hackermans_chestplate = ChestPlate("Hacker_Mans_Chestplate", 0, -1, None)
+hackermans_chestplate = ChestPlate("Hacker Mans Chestplate", 0, -1, None)
 gold_chestplate = ChestPlate("Golden ChestPlate", .80, 70, None)
 chainmail_chestplate = ChestPlate("Chainmail ChestPlate", .80, 100, None)
 kevlar_chestPlate = ChestPlate("Kevlar Chestplate", .60, 200, None)
@@ -143,6 +143,13 @@ elon_musket = Demonitizer("A Elon Musket", 20, 10, 250, None, None)
 
 # Potions
 HealthPotion1 = Potion("Level 1 Health Potion", 50, None, None, 1)
+
+# Food
+bread = Food('Bread', 10, 10, None, None)
+apple = Food('Apple', 5, 15, None, None)
+pizza = Food('Pizza Pie', 40, 50, None, None)
+sandwich = Food('Sandwich', 20, 25, None, None)
+berries = Food('Berries', 2, 3, None, None)
 
 
 # Character
@@ -202,6 +209,11 @@ class Player(object):
 
     def take(self):
         self.inventory.append(command.lower())
+        for i in range(len(self.current_location.items)):
+            grab = self.current_location.items[i]
+            if command.lower() == grab.name.lower():
+                self.inventory.append(grab)
+                self.current_location.items.remove(grab)
 
     def find_next_room(self, direction):
         """This method searches the current room to use if a room exists in that direction
@@ -232,7 +244,7 @@ R19A = Room("Mr Wiebe's Room", 'parking_lot', None, None, None)
 parking_lot = Room("Parking Lot", None, 'R19A', None, None)
 """
 T_Spawn = Room("T Spawn", 'outside_long', 'top_mid', None, 'upper_b', None, "You are in T Spawn, East of you is "
-                                                                            "outside of long, North is top of mid"
+                                                                            "outside of long, North is top of mid, "
                                                                             "West leads to upper b",
                [generations_sword])
 outside_long = Room("Outside of Long", None, 'blue', 'T_Spawn', 'top_mid', None, "You are outside of long, North of you"
@@ -282,9 +294,8 @@ player = Player(T_Spawn)
 
 playing = True
 directions = ['north', 'south', 'east', 'west', 'northeast', 'up', 'down']
-grab = ['grab', 'take']
+take = ['grab', 'take']
 chckinv = ['inventory', 'items', 'check inventory']
-current_rooms_inventory = "boom"
 while playing:
     print(player.current_location.name)
     print(player.current_location.description)
@@ -293,11 +304,12 @@ while playing:
         playing = False
     elif command.lower() in chckinv:
         print(player.inventory)
-    elif command.lower() in grab:
+    elif command.lower() in take:
         try:
+            print("What do you want to take?")
             player.take()
         except KeyError:
-            print("There is no such item!")
+            print("You cannot take it")
 
     elif command.lower() in directions:
         try:
