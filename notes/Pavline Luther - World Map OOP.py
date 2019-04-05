@@ -212,7 +212,7 @@ class Player(object):
         for i in range(len(self.current_location.items)):
             grab = self.current_location.items[i]
             if command.lower() == grab.name.lower():
-                self.inventory.append(grab)
+                self.inventory.append(command[5:])
                 self.current_location.items.remove(grab)
 
     def find_next_room(self, direction):
@@ -306,7 +306,6 @@ while playing:
         print(player.inventory)
     elif command.lower() in take:
         try:
-            print("What do you want to take?")
             player.take()
         except KeyError:
             print("You cannot take it")
