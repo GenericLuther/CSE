@@ -208,12 +208,7 @@ class Player(object):
         self.inventory = []
 
     def take(self):
-        self.inventory.append(command.lower())
-        for i in range(len(self.current_location.items)):
-            grab = self.current_location.items[i]
-            if command.lower() == grab.name.lower():
-                self.inventory.append(command[5:])
-                self.current_location.items.remove(grab)
+        self.inventory.append(command.lower[5:])
 
     def find_next_room(self, direction):
         """This method searches the current room to use if a room exists in that direction
@@ -306,7 +301,7 @@ while playing:
         print(player.inventory)
     elif command.lower() in take:
         try:
-            player.take()
+            self.inventory.append(command.lower[5:])
         except KeyError:
             print("You cannot take it")
 
