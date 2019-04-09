@@ -20,7 +20,7 @@
     <SUITE FILE_PATH="coverage/notes$Special_Random.coverage" NAME="Special Random Coverage Results" MODIFIED="1550079656644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/notes$Pavline_Luther___Dictionary_World_Map.coverage" NAME="Pavline Luther - Dictionary World Map Coverage Results" MODIFIED="1551807429526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/notes$Pavline_Luther___Guess_Game.coverage" NAME="Pavline Luther - Guess Game Coverage Results" MODIFIED="1541698336906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/notes$Pavline_Luther___World_Map_OOP.coverage" NAME="Pavline Luther - World Map OOP Coverage Results" MODIFIED="1554741700066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/notes$Pavline_Luther___World_Map_OOP.coverage" NAME="Pavline Luther - World Map OOP Coverage Results" MODIFIED="1554827768101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/notes$Pavline_Luther___Lucky_7s.coverage" NAME="Pavline Luther - Lucky 7s Coverage Results" MODIFIED="1554740337219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/notes$ObjectNotes.coverage" NAME="ObjectNotes Coverage Results" MODIFIED="1550079682920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/notes$Pavline_Luther___Mad_Lib.coverage" NAME="Pavline Luther - Mad Lib Coverage Results" MODIFIED="1541525323598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -75,7 +75,7 @@
           <entry key="project.open.time.65" value="5" />
           <entry key="project.open.time.66" value="1" />
           <entry key="project.open.time.68" value="2" />
-          <entry key="project.open.time.69" value="1" />
+          <entry key="project.open.time.69" value="2" />
           <entry key="project.open.time.70" value="3" />
           <entry key="project.open.time.71" value="1" />
           <entry key="project.open.time.74" value="1" />
@@ -86,14 +86,14 @@
           <entry key="project.open.time.82" value="1" />
           <entry key="project.open.time.84" value="1" />
           <entry key="project.open.time.89" value="1" />
-          <entry key="project.opened" value="65" />
+          <entry key="project.opened" value="66" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="33" />
-          <entry key="py" value="22971" />
+          <entry key="py" value="23130" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -109,7 +109,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="33" />
-          <entry key="Python" value="22971" />
+          <entry key="Python" value="23130" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -120,7 +120,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pavline Luther - Object Class.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
+            <state relative-caret-position="918">
               <caret line="54" column="27" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
               <folding>
                 <marker date="1550252487280" expanded="true" signature="19:24" ph="..." />
@@ -141,12 +141,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Pavline Luther - World Map OOP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="304" column="24" lean-forward="true" selection-start-line="304" selection-start-column="24" selection-end-line="304" selection-end-column="24" />
+            <state relative-caret-position="157">
+              <caret line="307" column="14" selection-start-line="307" selection-start-column="14" selection-end-line="307" selection-end-column="14" />
               <folding>
-                <marker date="1554741869368" expanded="true" signature="6138:6143" ph="..." />
-                <marker date="1554741869368" expanded="true" signature="6306:6361" ph="..." />
-                <marker date="1554741869368" expanded="true" signature="6356:6361" ph="..." />
+                <marker date="1554828253553" expanded="true" signature="6138:6143" ph="..." />
+                <marker date="1554828253553" expanded="true" signature="6306:6361" ph="..." />
+                <marker date="1554828253553" expanded="true" signature="6356:6361" ph="..." />
               </folding>
             </state>
           </provider>
@@ -156,7 +156,7 @@
         <entry file="file://$PROJECT_DIR$/Pavline Luther - Guess Game.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+              <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -164,8 +164,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pavline Luther - Lucky 7s.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="36" column="49" lean-forward="true" selection-start-line="36" selection-start-column="49" selection-end-line="36" selection-end-column="49" />
+            <state relative-caret-position="612">
+              <caret line="36" column="49" selection-start-line="36" selection-start-column="49" selection-end-line="36" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -174,7 +174,7 @@
         <entry file="file://$PROJECT_DIR$/Pavline Luther Python Challenges.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="493">
-              <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+              <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -182,7 +182,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Hello World.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
+            <state relative-caret-position="1938">
               <caret line="114" column="11" selection-start-line="114" selection-start-column="11" selection-end-line="114" selection-end-column="11" />
             </state>
           </provider>
@@ -191,7 +191,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Inheritance.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
+            <state relative-caret-position="1139">
               <caret line="67" selection-start-line="67" selection-end-line="67" />
               <folding>
                 <marker date="1552580647488" expanded="true" signature="42:98" ph="..." />
@@ -208,7 +208,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Items.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
+            <state relative-caret-position="2312">
               <caret line="136" column="89" selection-start-line="136" selection-start-column="89" selection-end-line="136" selection-end-column="89" />
               <folding>
                 <marker date="1552579860574" expanded="true" signature="100:189" ph="..." />
@@ -519,10 +519,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <marker date="1550079945213" expanded="true" signature="34:35" ph="..." />
-            <marker date="1550079945213" expanded="true" signature="34:44" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -533,16 +529,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pavline Luther - Dictionary World Map.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="68" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pavline Luther - Object Class.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
+        <state relative-caret-position="918">
           <caret line="54" column="27" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
           <folding>
             <marker date="1550252487280" expanded="true" signature="19:24" ph="..." />
@@ -550,24 +539,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Items.py">
+    <entry file="file://$PROJECT_DIR$/Pavline Luther - HangMan2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="136" column="89" selection-start-line="136" selection-start-column="89" selection-end-line="136" selection-end-column="89" />
-          <folding>
-            <marker date="1552579860574" expanded="true" signature="100:189" ph="..." />
-            <marker date="1552579860574" expanded="true" signature="1903:1908" ph="..." />
-            <marker date="1552579860574" expanded="true" signature="2008:2013" ph="..." />
-            <marker date="1552579860574" expanded="true" signature="2261:2266" ph="..." />
-            <marker date="1552579860574" expanded="true" signature="2507:2769" ph="..." />
-            <marker date="1552579860574" expanded="true" signature="3512:3521" ph="..." />
-          </folding>
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pavline Luther - Guess Game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pavline Luther - Lucky 7s.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="49" selection-start-line="36" selection-start-column="49" selection-end-line="36" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pavline Luther Python Challenges.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Hello World.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1938">
+          <caret line="114" column="11" selection-start-line="114" selection-start-column="11" selection-end-line="114" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Inheritance.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
+        <state relative-caret-position="1139">
           <caret line="67" selection-start-line="67" selection-end-line="67" />
           <folding>
             <marker date="1552580647488" expanded="true" signature="42:98" ph="..." />
@@ -580,49 +589,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Hello World.py">
+    <entry file="file://$PROJECT_DIR$/Items.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="114" column="11" selection-start-line="114" selection-start-column="11" selection-end-line="114" selection-end-column="11" />
+        <state relative-caret-position="2312">
+          <caret line="136" column="89" selection-start-line="136" selection-start-column="89" selection-end-line="136" selection-end-column="89" />
+          <folding>
+            <marker date="1552579860574" expanded="true" signature="100:189" ph="..." />
+            <marker date="1552579860574" expanded="true" signature="1903:1908" ph="..." />
+            <marker date="1552579860574" expanded="true" signature="2008:2013" ph="..." />
+            <marker date="1552579860574" expanded="true" signature="2261:2266" ph="..." />
+            <marker date="1552579860574" expanded="true" signature="2507:2769" ph="..." />
+            <marker date="1552579860574" expanded="true" signature="3512:3521" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pavline Luther Python Challenges.py">
+    <entry file="file://$PROJECT_DIR$/Pavline Luther - Dictionary World Map.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pavline Luther - Lucky 7s.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="36" column="49" lean-forward="true" selection-start-line="36" selection-start-column="49" selection-end-line="36" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pavline Luther - Guess Game.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pavline Luther - HangMan2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        <state relative-caret-position="68">
+          <caret line="4" column="68" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="68" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Pavline Luther - World Map OOP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="304" column="24" lean-forward="true" selection-start-line="304" selection-start-column="24" selection-end-line="304" selection-end-column="24" />
+        <state relative-caret-position="157">
+          <caret line="307" column="14" selection-start-line="307" selection-start-column="14" selection-end-line="307" selection-end-column="14" />
           <folding>
-            <marker date="1554741869368" expanded="true" signature="6138:6143" ph="..." />
-            <marker date="1554741869368" expanded="true" signature="6306:6361" ph="..." />
-            <marker date="1554741869368" expanded="true" signature="6356:6361" ph="..." />
+            <marker date="1554828253553" expanded="true" signature="6138:6143" ph="..." />
+            <marker date="1554828253553" expanded="true" signature="6306:6361" ph="..." />
+            <marker date="1554828253553" expanded="true" signature="6356:6361" ph="..." />
           </folding>
         </state>
       </provider>

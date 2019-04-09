@@ -301,8 +301,11 @@ while playing:
         print(player.inventory)
     elif command.lower() in take:
         try:
-            self.inventory.append(command.lower[5:])
-        except KeyError:
+            if command.lower()[5:] == "take ":
+                if len(player.current_location.items) > 0:
+                    if player.current_location.items == command.lower()[:5]:
+                        player.inventory.append(command.lower()[:5])
+        except:
             print("You cannot take it")
 
     elif command.lower() in directions:
