@@ -291,6 +291,7 @@ player = Player(T_Spawn)
 
 playing = True
 directions = ['north', 'south', 'east', 'west', 'northeast', 'up', 'down']
+short_directions = ('n', 's', 'e', 'w', 'u', 'd')
 take = ['grab', 'take']
 chckinv = ['inventory', 'items', 'check inventory']
 while playing:
@@ -299,6 +300,9 @@ while playing:
     command = input(">_")
     if command.lower() in ('q', 'quit', 'exit'):
         playing = False
+    if command.lower() in short_directions:
+        pos = short_directions.index(command.lower())
+        command = directions(pos)
     elif command.lower() in chckinv:
         print(player.inventory)
     elif command.lower() in take:
