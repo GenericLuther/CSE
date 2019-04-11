@@ -294,7 +294,7 @@ player = Player(T_Spawn)
 
 playing = True
 directions = ['north', 'south', 'east', 'west', 'northeast', 'up', 'down']
-short_directions = ['n', 's', 'e', 'w', 'ne', 'u', 'd']
+short_directions = ('n', 's', 'e', 'w', 'ne', 'u', 'd')
 take = ['grab', 'take']
 chckinv = ['inventory', 'items', 'check inventory']
 while playing:
@@ -307,12 +307,6 @@ while playing:
         pos = short_directions.index(command.lower())
         command = directions[pos]
         print(command.lower())
-    if command.lower() in directions:
-        try:
-            next_room = player.find_next_room(command.lower())
-            player.move(next_room)
-        except KeyError:
-            print("I can't go that way!")
     elif command.lower() in chckinv:
         print(player.inventory)
     elif command.lower() in take:
@@ -324,5 +318,11 @@ while playing:
         except KeyError:
             print("You cannot take it")
 
+    elif command.lower() in directions:
+        try:
+            next_room = player.find_next_room(command.lower())
+            player.move(next_room)
+        except KeyError:
+            print("I can't go that way!")
     else:
             print("Command Not Found")
