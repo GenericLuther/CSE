@@ -124,25 +124,28 @@ chainmail_chestplate = ChestPlate("Chainmail ChestPlate", .80, 100, None)
 kevlar_chestPlate = ChestPlate("Kevlar Chestplate", .60, 200, None)
 
 # Melee Weapons
-wood_sword = Sword("Sword", 50, 20, 0, None)
+wood_sword = Sword("Wooden Sword", 50, 20, 0, None)
 iron_sword = Sword("Sword", 100, 20, .10, None)
 hackermans_sword = Sword("HM_Sword", -1, 42069, 1, None)
 wood_board = Shield("Wood Board", .10, 50, 5, 0, None)
-generations_sword = Sword("The Sword Of Many Generations", 9999999, 70, .40, None)
+generations_sword = Sword("A Sword With A Long History", 99999999999999, 70, .40, None)
 
 
 # Throwables
 bazinga = Throwable("Bazinga", 1, 730, None, None)
 dynamite = Throwable("Sticks of Dynamite", 3, 50, None, None)
+can = Throwable('Can', 1, 2, None, None)
+rock = Throwable('Rock', 1, 5, None, None)
 
 # Demonitizers
-dragonlore = Demonitizer("DragonLore", 10, 50, 115, None, None)
+AWP = Demonitizer("AWP", 10, 50, 115, None, None)
 skraaa = Demonitizer("The Skraaa", 20, 90, 25, None, None)
 lmb = Demonitizer("Light Machine Blaster", 45, 40, 40, None, None)
 elon_musket = Demonitizer("A Elon Musket", 20, 10, 250, None, None)
 
 # Potions
-HealthPotion1 = Potion("Level 1 Health Potion", 50, None, None, 1)
+healthpotion1 = Potion("Level 1 Health Potion", 50, None, None, 1)
+holywater = Potion("Holy Water", 500, None, None, 1)
 
 # Food
 bread = Food('Bread', 10, 10, None, None)
@@ -150,6 +153,7 @@ apple = Food('Apple', 5, 15, None, None)
 pizza = Food('Pizza Pie', 40, 50, None, None)
 sandwich = Food('Sandwich', 20, 25, None, None)
 berries = Food('Berries', 2, 3, None, None)
+chicken = Food('Chicken', 25, 35, None, None)
 
 
 # Character
@@ -256,7 +260,7 @@ long = Room("Long", None, 'ramp', 'blue', 'ct_ramp', None, "You're on a long pat
                                                            "and West is CT  ramp",
             [])
 ramp = Room("Ramp", None, None, 'long', 'a_site', None, "You're on a ramp, South is long and West is A SITE",
-            [dragonlore])
+            [AWP])
 a_site = Room("A SITE", 'ramp', None, 'ct_ramp', 'a_plat', None, "You're on A SITE, East is ramp, you can drop South "
                                                                  "onto CT ramp, and west is A plat",
               [])
@@ -271,13 +275,16 @@ top_mid = Room("Top of Mid", 'outside_long', 'mid', None, None, 'cat', "You are 
 mid = Room("Mid", 'cat', 'ct_mid', 'top_mid', 'lower_b', None, "You are at mid, East is cat, North is CT mid, South is "
                                                                "top of mid, West is lower B",
            [])
-ct_mid = Room("CT Mid", 'CT_Spawn', None, 'mid', 'outside_b', None, "",
+ct_mid = Room("CT Mid", 'CT_Spawn', None, 'mid', 'outside_b', None, "You ar at CT mid, South is mid, East is CT Spawn, "
+                                                                    "West is goes to outside of B",
               [], [])
-CT_Spawn = Room("CT Spawn", 'ct_ramps', None, None, 'ct_mid', None, "",
+CT_Spawn = Room("CT Spawn", 'ct_ramps', None, None, 'ct_mid', None, "You are in CT Spawn, West is CT mid,"
+                                                                    " East is CT ramp",
                 [], )
-ct_ramp = Room("CT Ramp", 'CT_Spawn', None, None, 'long', None, "",
+ct_ramp = Room("CT Ramp", 'CT_Spawn', None, None, 'long', None, "You are on CT ramp, West is CT Spawn, East is long.",
                [])
-outside_b = Room("Outside of B Site", 'ct_mid', 'window', None, 'b_site', None, "",
+outside_b = Room("Outside of B Site", 'ct_mid', 'window', None, 'b_site', None, "You are outside of B, East is CT mid, "
+                                                                                "West is B site, North is Window.",
                  [])
 window = Room("Window", 'b_site', None, 'outside_b', 'ct_mid', None, "",
               [])
