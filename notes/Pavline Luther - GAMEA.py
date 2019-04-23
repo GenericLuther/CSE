@@ -142,6 +142,7 @@ AWP = Demonitizer("AWP", 10, 50, 115, None, None)
 skraaa = Demonitizer("The Skraaa", 20, 90, 25, None, None)
 lmb = Demonitizer("Light Machine Blaster", 45, 40, 40, None, None)
 elon_musket = Demonitizer("A Elon Musket", 20, 10, 250, None, None)
+dubstep_blaster = Demonitizer("Dubstep Blaster", 5, 95, 175, None, None)
 
 # Potions
 healthpotion1 = Potion("Level 1 Health Potion", 50, None, None, 1)
