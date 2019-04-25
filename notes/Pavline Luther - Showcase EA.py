@@ -210,9 +210,6 @@ class Player(object):
         self.health = 150
         self.inventory = []
 
-    def take(self):
-        self.inventory.append(command.lower[5:])
-
     def find_next_room(self, direction):
         """This method searches the current room to use if a room exists in that direction
 
@@ -296,6 +293,7 @@ playing = True
 directions = ['north', 'south', 'east', 'west', 'northeast', 'up', 'down']
 short_directions = ['n', 's', 'e', 'w', 'ne', 'u', 'd']
 take = ['grab', 'take']
+stats = ['check health', 'health', 'stats']
 chckinv = ['inventory', 'items', 'check inventory']
 while playing:
     print(player.current_location.name)
@@ -307,6 +305,8 @@ while playing:
         pos = short_directions.index(command.lower())
         command = directions[pos]
         print(command.lower())
+    if command.lower in stats:
+        print()
     if command.lower() in directions:
         try:
             next_room = player.find_next_room(command.lower())
@@ -315,14 +315,5 @@ while playing:
             print("I can't go that way!")
     elif command.lower() in chckinv:
         print(player.inventory)
-    elif command.lower() in take:
-        try:
-            if command.lower()[5:] == "take ":
-                if len(player.current_location.items) > 0:
-                    if player.current_location.items == command.lower()[:5]:
-                        player.inventory.append(command.lower()[:5])
-        except KeyError:
-            print("You cannot take it")
-
     else:
-            print("Command Not Found")
+        print("Command Not Found")
