@@ -72,12 +72,12 @@ import csv
 #     return False
 #
 #
-# def divisible_by_2(num: str):
-#     first_num = int(num[0])
-#     if first_num % 2 == 0:
-#         return True
-#     return False
-#
+def divisible_by_2(num: str):
+    first_num = int(num[0])
+    if first_num % 2 == 0:
+        return True
+    return False
+
 #
 # def reverse_it(string):
 #     print (string[::-1])
