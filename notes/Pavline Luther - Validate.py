@@ -88,7 +88,7 @@ def valid_card_number(num):
 
 
 with open("Book1.csv", 'r') as old_csv:
-    print("Big Thonk")
+    print("Thinking...")
     y = 0
     x = 0
     reader = csv.reader(old_csv)
@@ -102,4 +102,4 @@ with open("Book1.csv", 'r') as old_csv:
 
 print("Invalid Credit Card Numbers- %d" % x)
 print("Invalid Invalid Credit Card Numbers- %d" % y)
-print('K')
+print('Fin')
