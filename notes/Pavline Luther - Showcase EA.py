@@ -157,7 +157,7 @@ class Character(object):
     def __init__(self, name: str, health: int, weapon, clothes):
         self.name = name
         self.health = health
-        self.weapon = weapon
+        self.damage = weapon
         self.clothes = clothes
 
     def take_damage(self, damage: int):
@@ -166,24 +166,24 @@ class Character(object):
             if self.health <= 0:
                 print("You killed it")
         else:
-            self.health -= self.weapon.damage * self.clothes.protection
+            self.health -= self.damage.damage * self.clothes.protection
             if self.health <= 0:
                 print("You killed it")
         print("%s had %d left" % (self.name, self.health))
 
     def attack(self, target):
         if self.clothes is None:
-            print("%s attacks %s for %d damage" % (self.name, target.name, self.weapon.damage))
-            target.take_damage(self.weapon.damage)
+            print("%s attacks %s for %d damage" % (self.name, target.name, self.damage))
+            target.take_damage(self.damage)
         else:
-            print("%s attacks %s for %d damage" % (self.name, target.name, self.weapon.damage))
-            target.take_damage(self.weapon.damage)
+            print("%s attacks %s for %d damage" % (self.name, target.name, self.damage))
+            target.take_damage(self.damage)
 
 
-skeleton = Character("Skelly Boy", 120, iron_sword, gold_chestplate)
-skeleton2 = Character("Spooky Boy", 120, wood_sword, gold_chestplate)
-blubber_boy = Character("Blubber Boy", 250, wood_sword, None)
-hacker = Character("Hacker", 9999, hackermans_sword, hackermans_chestplate)
+skeleton = Character("Skelly Boy", 120, 20, gold_chestplate)
+skeleton2 = Character("Spooky Boy", 120, 20, gold_chestplate)
+blubber_boy = Character("Blubber Boy", 250, 25, None)
+hacker = Character("Hacker", 9999, 42069, hackermans_chestplate)
 
 
 # Room/Player
@@ -305,8 +305,15 @@ while playing:
         pos = short_directions.index(command.lower())
         command = directions[pos]
         print(command.lower())
-    if command.lower in stats:
-        print()
+    if command.lower() in stats:
+        print('''
+        ----------------------------------------------------------------------------------------------------------------
+        Health: %s
+        Inventory: %s
+        Current Location: %s
+        ----------------------------------------------------------------------------------------------------------------
+        
+        ''' % (player.health, player.inventory, player.current_location.name))
     if command.lower() in directions:
         try:
             next_room = player.find_next_room(command.lower())
