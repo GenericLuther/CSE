@@ -1,5 +1,6 @@
 import csv
 
+
 with open("Sales Records.csv", 'r') as profit_csv:
     print("Thinking...")
     reader = csv.reader(profit_csv)
@@ -15,3 +16,4 @@ with open("Sales Records.csv", 'r') as profit_csv:
         else:
             continue
     print("The largest profit is: %s" % most_profit)
+
