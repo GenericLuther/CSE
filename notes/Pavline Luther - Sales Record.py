@@ -1,19 +1,20 @@
 import csv
-import hack
-most_profit = float(0)
+total_profit = float(0)
+average_profit = float(0)
+average_profit_item = ""
+total_profit_item = ""
+items = []
 with open("Sales Records.csv", 'r') as profit_csv:
     print("Thinking...")
     reader = csv.reader(profit_csv)
     firstline = True
     for row in reader:
-        if firstline:
+        if firstline is True:
             firstline = False
             continue
-        profit = row[13]
-        if most_profit < float(profit):
-            most_profit = float(profit)
-            print(most_profit)
-        else:
+        if row[2] in items:
             continue
-    print("The largest profit is: %s" % most_profit)
+        else:
+            items.append(row[2])
+            print(row[2])
 
