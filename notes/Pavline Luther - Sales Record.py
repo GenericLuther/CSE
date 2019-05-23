@@ -47,51 +47,39 @@ with open("Sales Records.csv", 'r') as profit_csv:
             firstline = False
             continue
         if row[2] == 'Fruits':
-            if float(row[13]) > float(total_profit_fruit):
                 total_profit_fruit += float(row[13])
                 total_items_fruit += 1
         if row[2] == 'Clothes':
-            if float(row[13]) > float(total_profit_clothes):
                 total_profit_clothes += float(row[13])
                 total_items_clothes += 1
         if row[2] == 'Meat':
-            if float(row[13]) > float(total_profit_meat):
                 total_profit_meat += float(row[13])
                 total_items_meat += 1
         if row[2] == 'Beverages':
-            if float(row[13]) > float(total_profit_beverages):
                 total_profit_beverages += float(row[13])
                 total_items_beverages += 1
         if row[2] == 'Office Supplies':
-            if float(row[13]) > float(total_profit_office):
                 total_profit_office += float(row[13])
                 total_items_office += 1
         if row[2] == 'Cosmetics':
-            if float(row[13]) > float(total_profit_cosmetics):
                 total_profit_cosmetics += float(row[13])
                 total_items_cosmetics += 1
         if row[2] == 'Snacks':
-            if float(row[13]) > float(total_profit_snacks):
                 total_profit_snacks += float(row[13])
                 total_items_snacks += 1
         if row[2] == 'Personal Care':
-            if float(row[13]) > float(total_profit_care):
                 total_profit_care += float(row[13])
                 total_items_care += 1
         if row[2] == 'Household':
-            if float(row[13]) > float(total_profit_house):
                 total_profit_house += float(row[13])
                 total_items_house += 1
         if row[2] == 'Vegetables':
-            if float(row[13]) > float(total_profit_veg):
                 total_profit_veg += float(row[13])
                 total_items_veg += 1
         if row[2] == 'Baby Food':
-            if float(row[13]) > float(total_profit_babyfd):
                 total_profit_babyfd += float(row[13])
                 total_items_babyfd += 1
         if row[2] == 'Cereal':
-            if float(row[13]) > float(total_profit_cereal):
                 total_profit_cereal += float(row[13])
                 total_items_cereal += 1
         else:

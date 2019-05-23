@@ -242,9 +242,10 @@ T_Spawn = Room("T Spawn", 'outside_long', 'top_mid', None, 'upper_b', None, "You
                                                                             "outside of long, North is top of mid, "
                                                                             "West leads to upper b",
                [generations_sword])
-outside_long = Room("Outside of Long", None, 'blue', 'T_Spawn', 'top_mid', None, "You are outside of long, North of you"
-                                                                                 "is blue, South goes to T Spawn, and "
-                                                                                 "West goes to the top of mid",
+outside_long = Room("Outside of Long", None, 'blue', 'T_Spawn', 'top_mid', None,"You are outside of long. "
+                                                                                "\n North of you"
+                                                                                "is blue, South goes to T Spawn, and "
+                                                                                "West goes to the top of mid",
                     [])
 blue = Room("Blue Bin", 'long', None, 'outside_long', None, None, "You're at blue, East of you is long, and South goes "
                                                                   "outside of long.",
