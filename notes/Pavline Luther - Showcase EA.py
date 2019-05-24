@@ -6,32 +6,32 @@ class Item(object):
         self.name = name
 
 
-class Consumable(Item):
-    def __init__(self, name):
-        super(Consumable, self).__init__(name)
-
-
-class Potion(Consumable):
-    def __init__(self, name, heal, buff, debuff, amount):
-        super(Potion, self).__init__(name)
-        self.heal = heal
-        self.buff = buff
-        self.debuff = debuff
-        self.hunger = 0
-        self.amount = amount
-
-    def consume(self):
-        self.amount -= 1
-        print("You gained %s health" % self.heal)
-
-
-class Food(Consumable):
-    def __init__(self, name, hunger, heal, buff, debuff):
-        super(Food, self).__init__(name)
-        self.hunger = hunger
-        self.heal = heal
-        self.buff = buff
-        self.debuff = debuff
+# class Consumable(Item):
+#     def __init__(self, name):
+#         super(Consumable, self).__init__(name)
+#
+#
+# class Potion(Consumable):
+#     def __init__(self, name, heal, buff, debuff, amount):
+#         super(Potion, self).__init__(name)
+#         self.heal = heal
+#         self.buff = buff
+#         self.debuff = debuff
+#         self.hunger = 0
+#         self.amount = amount
+#
+#     def consume(self):
+#         self.amount -= 1
+#         print("You gained %s health" % self.heal)
+#
+#
+# class Food(Consumable):
+#     def __init__(self, name, hunger, heal, buff, debuff):
+#         super(Food, self).__init__(name)
+#         self.hunger = hunger
+#         self.heal = heal
+#         self.buff = buff
+#         self.debuff = debuff
 
 
 class Weapon(Item):
@@ -119,7 +119,7 @@ class Helmet(Clothing):
 
 # Chest Plates
 hackermans_chestplate = ChestPlate("Hacker Mans Chestplate", 0, -1, None)
-gold_chestplate = ChestPlate("Golden ChestPlate", .80, 70, None)
+kevlar = ChestPlate("Golden ChestPlate", .80, 70, None)
 chainmail_chestplate = ChestPlate("Chainmail ChestPlate", .80, 100, None)
 kevlar_chestPlate = ChestPlate("Kevlar Chestplate", .60, 200, None)
 
@@ -141,15 +141,15 @@ skraaa = Demonitizer("The Skraaa", 20, 90, 25, None, None)
 lmb = Demonitizer("Light Machine Blaster", 45, 40, 40, None, None)
 elon_musket = Demonitizer("A Elon Musket", 20, 10, 250, None, None)
 
-# Potions
-HealthPotion1 = Potion("Level 1 Health Potion", 50, None, None, 1)
-
-# Food
-bread = Food('Bread', 10, 10, None, None)
-apple = Food('Apple', 5, 15, None, None)
-pizza = Food('Pizza Pie', 40, 50, None, None)
-sandwich = Food('Sandwich', 20, 25, None, None)
-berries = Food('Berries', 2, 3, None, None)
+# # Potions
+# HealthPotion1 = Potion("Level 1 Health Potion", 50, None, None, 1)
+#
+# # Food
+# bread = Food('Bread', 10, 10, None, None)
+# apple = Food('Apple', 5, 15, None, None)
+# pizza = Food('Pizza Pie', 40, 50, None, None)
+# sandwich = Food('Sandwich', 20, 25, None, None)
+# berries = Food('Berries', 2, 3, None, None)
 
 
 # Character
@@ -180,17 +180,16 @@ class Character(object):
             target.take_damage(self.damage)
 
 
-skeleton = Character("Skelly Boy", 120, 20, gold_chestplate)
-skeleton2 = Character("Spooky Boy", 120, 20, gold_chestplate)
-blubber_boy = Character("Blubber Boy", 250, 25, None)
-hacker = Character("Hacker", 9999, 42069, hackermans_chestplate)
+bad_guy_defender = Character("Bad Guy Defender", 100, 20, kevlar)
+bad_guy_attacker = Character("Bad Guy Attacker", 100, 20, kevlar)
+flanker = Character("Flanker", 200, 25, kevlar)
+hacker = Character("Hacker", 450, 42069, None)
+awper = Character("Awper", 100, 450, None)
 
 
 # Room/Player
 class Room(object):
-    def __init__(self, name, east, north, south, west, northeast, description, items=None, npc=None):
-        if npc is None:
-            npc = []
+    def __init__(self, name, east, north, south, west, northeast, description, npc, items=None):
         if items is None:
             items = []
         self.name = name
@@ -207,8 +206,10 @@ class Room(object):
 class Player(object):
     def __init__(self, starting_location):
         self.current_location = starting_location
-        self.health = 150
-        self.inventory = []
+        self.maxhealth = 150
+        self.health = 100
+        self.weapon = []
+        self.heal = 5
 
     def find_next_room(self, direction):
         """This method searches the current room to use if a room exists in that direction
@@ -240,88 +241,144 @@ parking_lot = Room("Parking Lot", None, 'R19A', None, None)
 """
 T_Spawn = Room("T Spawn", 'outside_long', 'top_mid', None, 'upper_b', None, "You are in T Spawn, East of you is "
                                                                             "outside of long, North is top of mid, "
-                                                                            "West leads to upper b",
-               [generations_sword])
-outside_long = Room("Outside of Long", None, 'blue', 'T_Spawn', 'top_mid', None,"You are outside of long. "
-                                                                                "\n North of you"
-                                                                                "is blue, South goes to T Spawn, and "
-                                                                                "West goes to the top of mid",
-                    [])
+                                                                            "West leads to upper b.\n This is where the"
+                                                                            " "
+                                                                            "T team spawns and also where an awper can"
+                                                                            "try to stop someone passing through mid",
+               [], None)
+outside_long = Room("Outside of Long", None, 'blue', 'T_Spawn', 'top_mid', None, "You are outside of long. "
+                                                                                 " \n North of you"
+                                                                                 "is blue, South goes to T Spawn, and "
+                                                                                 "West goes to the top of mid",
+                    [], bad_guy_attacker)
 blue = Room("Blue Bin", 'long', None, 'outside_long', None, None, "You're at blue, East of you is long, and South goes "
                                                                   "outside of long.",
-            [])
+            [], None)
 long = Room("Long", None, 'ramp', 'blue', 'ct_ramp', None, "You're on a long path, North of you is ramp, South is blue,"
-                                                           "and West is CT  ramp",
-            [])
+                                                           "and West is CT  ramp.\n Long range weapons are most "
+                                                           "effective here",
+            [], None)
 ramp = Room("Ramp", None, None, 'long', 'a_site', None, "You're on a ramp, South is long and West is A SITE",
-            [dragonlore])
+            [], None)
 a_site = Room("A SITE", 'ramp', None, 'ct_ramp', 'a_plat', None, "You're on A SITE, East is ramp, you can drop South "
-                                                                 "onto CT ramp, and west is A plat",
-              [])
+                                                                 "onto CT ramp, and west is A plat.\nWatch out for "
+                                                                 "awpers in this location, CT must defend this"
+                                                                 " site while the T must take it",
+              [], hacker)
 a_plat = Room("A Plat", 'a_site', None, 'cat', None, None, "You're on A plat, East is A SITE and South is cat",
-              [])
+              [], None)
 cat = Room("Cat", 'a_plat', None, 'top_mid', 'mid', None, 'You are on cat, East is A plat, South is top mid,'
-                                                          ' West is mid',
-           [])
+                                                          ' West is mid.\nWatch out for CT flankers where they will '
+                                                          'watch lower or try to flank into long ',
+           [], flanker)
 top_mid = Room("Top of Mid", 'outside_long', 'mid', None, None, 'cat', "You are top of mid, North is mid,"
-                                                                       " Northeast is cat, East is outside of long ",
-               [])
+                                                                       " Northeast is cat, East is outside of long\n"
+                                                                       "You are a clear shot for an awper up here ",
+               [], None)
 mid = Room("Mid", 'cat', 'ct_mid', 'top_mid', 'lower_b', None, "You are at mid, East is cat, North is CT mid, South is "
-                                                               "top of mid, West is lower B",
-           [])
-ct_mid = Room("CT Mid", 'CT_Spawn', None, 'mid', 'outside_b', None, "",
-              [], [])
-CT_Spawn = Room("CT Spawn", 'ct_ramps', None, None, 'ct_mid', None, "",
-                [], )
-ct_ramp = Room("CT Ramp", 'CT_Spawn', None, None, 'long', None, "",
-               [])
-outside_b = Room("Outside of B Site", 'ct_mid', 'window', None, 'b_site', None, "",
-                 [])
-window = Room("Window", 'b_site', None, 'outside_b', 'ct_mid', None, "",
-              [])
-b_site = Room("B SITE", 'outside_b', None, 'upper_b', 'backplat', None, "",
-              [])
-backplat = Room("Back Plat", None, None, 'upper_b', 'b_site', None, "",
-                [])
-upper_b = Room("Upper B", 'lower_b', 'backplat', 'T_Spawn', None, None, "",
-               [])
-lower_b = Room("Lower B", 'mid', None, None, 'upper_b', None, "",
-               [])
+                                                               "top of mid, West is lower B."
+                                                               "\nWatch out for awpers down"
+                                                               " in CT mid",
+           [], None)
+ct_mid = Room("CT Mid", 'CT_Spawn', None, 'mid', 'outside_b', None, "You are at CT mid. West is outside of B, South is"
+                                                                    "Mid, and East is CT Spawn.\nThis is where an "
+                                                                    "awper an awper would be",
+              [], awper)
+CT_Spawn = Room("CT Spawn", 'ct_ramps', None, None, 'ct_mid', None, "You are in CT Spawn. West is Ct mid, East is CT "
+                                                                    "ramp.\nThis is the CT team spawns",
+                [], None)
+ct_ramp = Room("CT Ramp", 'CT_Spawn', None, None, 'long', None, "This is CT ramp, East is Long, West is CT Spawn",
+               [], None)
+outside_b = Room("Outside of B Site", 'ct_mid', 'window', None, 'b_site', None, "This is outside of B, North is window,"
+                                                                                "East is B site, West is CT mid",
+                 [], None)
+window = Room("Window", 'b_site', None, 'outside_b', 'ct_mid', None, "This is B site's window, West is CT mid, East is"
+                                                                     " B site, South is outside of B.\n"
+                                                                     "an awper would be here watching people either"
+                                                                     "entering CT mid or exiting upper B",
+              [], None)
+b_site = Room("B SITE", 'outside_b', None, 'upper_b', 'backplat', None, "You are on B site, West is outside of B, "
+                                                                        "South is upper B, East is backplat.\n"
+                                                                        "CT must defend this site while the T must take"
+                                                                        " it",
+              [], None)
+backplat = Room("Back Plat", None, None, 'upper_b', 'b_site', None, "This is back plat, South is upper B, and West is "
+                                                                    "B site.\nWatch out people holding long angles "
+                                                                    "here",
+                [], bad_guy_defender)
+upper_b = Room("Upper B", 'lower_b', 'backplat', 'T_Spawn', None, None, "This is upper B, West is lower B, North is"
+                                                                        "Backplat, South is T Spawn.\nThere is a long"
+                                                                        " narrow tunnel to B site where you can easily"
+                                                                        " get hurt",
+               [], None)
+lower_b = Room("Lower B", 'upper_b', None, None, 'mid', None, "Lower B is where you are, West is mid, East is upper B",
+               [], None)
+picking = True
+playing = False
+while picking:
+    answer = input("Where you like to spawn? (T/CT)\n> ")
+    if answer.lower().strip() == 't':
+        player = Player(T_Spawn)
+        playing = True
+        picking = False
+    if answer.lower().strip() == 'ct':
+        player = Player(CT_Spawn)
+        playing = True
+        picking = False
+    else:
+        continue
 
-player = Player(T_Spawn)
-
-playing = True
 directions = ['north', 'south', 'east', 'west', 'northeast', 'up', 'down']
 short_directions = ['n', 's', 'e', 'w', 'ne', 'u', 'd']
 take = ['grab', 'take']
 stats = ['check health', 'health', 'stats']
+heal = ['heal']
 chckinv = ['inventory', 'items', 'check inventory']
+enemy_rooms = ['Outside of Long','Back Plat', 'CT Mid', 'A SITE', 'Cat']
+
 while playing:
     print(player.current_location.name)
     print(player.current_location.description)
-    command = input(">_")
+
+    command = input("> ")
+    if player.current_location.name in enemy_rooms:
+        print("There is an enemy here! It's %s" % Room.npc)
+    if player.health > player.maxhealth:
+        player.health = player.maxhealth
+    if player.health <= 0:
+        print("You Died! \nTry Again!")
+        playing = False
     if command.lower() in ('q', 'quit', 'exit'):
         playing = False
     if command.lower() in short_directions:
         pos = short_directions.index(command.lower())
         command = directions[pos]
         print(command.lower())
+    if command.lower() in heal:
+        if player.health < player.maxhealth:
+            player.health += 50
+            print("You healed yourself! \nYour health is: %s " % player.health)
+            player.heal -= 1
+        else:
+            print("You can't or do not need to heal.")
+            continue
     if command.lower() in stats:
         print('''
         ----------------------------------------------------------------------------------------------------------------
         Health: %s
-        Inventory: %s
+        Weapon: %s
+        Healing Items Left: %s
         Current Location: %s
         ----------------------------------------------------------------------------------------------------------------
         
-        ''' % (player.health, player.inventory, player.current_location.name))
+        ''' % (player.health, player.weapon, player.heal, player.current_location.name))
     if command.lower() in directions:
         try:
             next_room = player.find_next_room(command.lower())
             player.move(next_room)
         except KeyError:
             print("I can't go that way!")
-    elif command.lower() in chckinv:
-        print(player.inventory)
-    else:
-        print("Command Not Found")
+    # elif command.lower()[0:6] == "attack":
+    # if command.lower() in chckinv:
+    #     print(player.inventory)
+
