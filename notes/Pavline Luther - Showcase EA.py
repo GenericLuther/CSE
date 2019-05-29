@@ -284,7 +284,7 @@ ct_mid = Room("CT Mid", 'CT_Spawn', None, 'mid', 'outside_b', None, "You are at 
                                                                     "Mid, and East is CT Spawn.\nThis is where an "
                                                                     "awper an awper would be",
               [], awper)
-CT_Spawn = Room("CT Spawn", 'ct_ramps', None, None, 'ct_mid', None, "You are in CT Spawn. West is Ct mid, East is CT "
+CT_Spawn = Room("CT Spawn", 'ct_ramp', None, None, 'ct_mid', None, "You are in CT Spawn. West is Ct mid, East is CT "
                                                                     "ramp.\nThis is the CT team spawns",
                 [], None)
 ct_ramp = Room("CT Ramp", 'CT_Spawn', None, None, 'long', None, "This is CT ramp, East is Long, West is CT Spawn",
@@ -341,8 +341,8 @@ while playing:
     print(player.current_location.description)
 
     command = input("> ")
-    if player.current_location.name in enemy_rooms:
-        print("There is an enemy here! It's %s" % Room.npc)
+    # if player.current_location.name in enemy_rooms:
+    #     print("There is an enemy here! It's %s" % Room.npc)
     if player.health > player.maxhealth:
         player.health = player.maxhealth
     if player.health <= 0:
